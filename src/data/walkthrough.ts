@@ -17,6 +17,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch01-s02',
         text: 'In Castle Baron 2F, head south down the stairs. On 1F, go east at the four-way junction and press the button behind the guard to reach three chests.',
+        treasureIds: ['c003'],
       },
       {
         id: 'ch01-s03',
@@ -36,14 +37,17 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch02-s01',
         text: "Baron has 8 hidden items and 3 chests available right now. Check the pot just east of the entrance, the bottom pot in the Inn's bedroom, and the swords upstairs in the Inn (a secret room with 3 chests).",
+        treasureIds: ['h01', 'h02', 'c006'],
       },
       {
         id: 'ch02-s02',
         text: 'Outside, check the pot between the buildings north of the Inn, then follow the river path north to two spots at the pond.',
+        treasureIds: ['h03', 'h05'],
       },
       {
         id: 'ch02-s03',
         text: 'In the northeast, push into the tree above the old woman to find a secret path with three more hidden items. That completes all 8 hidden items here. The last 3 chests open later with the Baron Key.',
+        treasureIds: ['h06', 'h07', 'h08'],
       },
       {
         id: 'ch02-s04',
@@ -52,6 +56,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch02-s05',
         text: 'Grab all 4 chests in the Mist Cave, then heal and save before the last set of stairs.',
+        treasureIds: ['c007', 'c008', 'c009', 'c010'],
       },
       {
         id: 'ch02-s06',
@@ -81,6 +86,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch03-s04',
         text: 'Check the northernmost pot north of the weapon shop for an Ether. Then visit the northeast house to see Rosa and leave town.',
+        treasureIds: ['h09'],
       },
       {
         id: 'ch03-s05',
@@ -96,18 +102,22 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch04-s01',
         text: 'South Entrance: grab the two chests straight north, then head west. Talk to the old man on the way and Tellah joins.',
+        treasureIds: ['c012', 'c013'],
       },
       {
         id: 'ch04-s02',
         text: 'Climb the narrow waterfall to the east for the Iron Armlet. Then walk through the middle of the wide waterfall to find a hidden chamber with 3 chests.',
+        treasureIds: ['c014', 'c017'],
       },
       {
         id: 'ch04-s03',
-        text: 'B2 and B3: follow the guide checklist below. Watch the magic tutorial in the southwest room, and look for the secret passage at the dead end on the second B2 visit (Feathered Cap).',
+        text: 'B2: take the west stairs from the water for a Potion, then go south and up the stairs for an Ether. Watch the magic tutorial in the southwest room, then grab the Ice Rod on the upper area to the east. B3: two chests on a side branch where the bridges split. Back on B2, follow the left path to a dead end with a secret passage (Feathered Cap), and pick up the Potion on the path north.',
+        treasureIds: ['c018', 'c019', 'c020', 'c022', 'c023', 'c024'],
       },
       {
         id: 'ch04-s04',
         text: 'North Entrance: two chests down the first stairs and two more across the east bridge (including the Shadowblade, great on Cecil). That makes all 18 chests.',
+        treasureIds: ['c026', 'c028'],
       },
       {
         id: 'ch04-s05',
@@ -123,10 +133,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch05-s01',
         text: 'Enter the cave northwest of the waterway exit. On B2, take the south stairs for the Hades Helm and Hades Gloves.',
+        treasureIds: ['c030'],
       },
       {
         id: 'ch05-s02',
         text: 'On B1, grab the Hades Armor and Hermes Shoes on the way east. Heal and save before touching the tentacles.',
+        treasureIds: ['c032'],
       },
       {
         id: 'ch05-s03',
@@ -142,19 +154,23 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch06-s01',
         text: 'At Damcyan, go one tile south and walk east around the wall to the jail. Talk to the wounded guard, then hit the switch for 3 chests.',
+        treasureIds: ['c035'],
       },
       {
         id: 'ch06-s02',
         text: 'Head down to Jail B1 for 6 chests and 3 pots. If you have been following along, Rookie Treasure Hunter pops around here.',
+        treasureIds: ['c041', 'h12'],
         achievementIds: ['rookie-treasure-hunter'],
       },
       {
         id: 'ch06-s03',
         text: 'Grab the Tent in the 2F northeast corner, then go up to 3F for the story scenes. Tellah leaves and Edward joins. You get the Hovercraft.',
+        treasureIds: ['c042'],
       },
       {
         id: 'ch06-s04',
         text: 'Hovercraft northeast and over the shallows to the Antlion Cave. It has 13 chests across B1 and B2, including a Lamia\'s Harp behind the B2 door and a save room on the way back up.',
+        treasureIds: ['c044', 'c046', 'c047', 'c048', 'c049', 'c050', 'c052', 'c055'],
       },
       {
         id: 'ch06-s05',
@@ -174,10 +190,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch07-s02',
         text: 'Head east of the Antlion Cave to Mt. Hobs. Rydia learns Fire at the entrance. The Trail on the west side has 4 chests and a save point.',
+        treasureIds: ['c059'],
       },
       {
         id: 'ch07-s03',
         text: 'Grab the Holy Arrow on the Summit, then heal and save.',
+        treasureIds: ['c060'],
       },
       {
         id: 'ch07-s04',
@@ -207,10 +225,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch08-s03',
         text: 'Throne Room: check the northwest pot, then stand on the button on the east side to open a passage with 3 chests.',
+        treasureIds: ['h13', 'c063'],
       },
       {
         id: 'ch08-s04',
         text: 'Talk to the innkeeper and answer Yes. Cecil gets the Deathbringer. Loot the East Tower (3F chest, 2F pot) and the West Tower 1F (1 pot, 3 chests).',
+        treasureIds: ['c064', 'h14', 'h15', 'c067'],
       },
       {
         id: 'ch08-s05',
@@ -233,7 +253,8 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch09-s03',
-        text: 'East, north through the woods, then east again to a large forest. Enter the Chocobo Forest and check the marked spot for Gysahl Greens.',
+        text: 'East, north through the woods, then east again to a large forest. Enter the Chocobo Forest and search the middle of the dark grass clearing at its center for Gysahl Greens.',
+        treasureIds: ['h16'],
       },
       {
         id: 'ch09-s04',
@@ -249,10 +270,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch10-s01',
         text: 'Palom clears the fire. Grab the two Potions on the Entrance, then meet Tellah on the Ridge. He rejoins.',
+        treasureIds: ['c068', 'c069'],
       },
       {
         id: 'ch10-s02',
         text: 'Grab both Ethers on the Pass (4 chests total in the dungeon). Lilith is easier to find on the way back down.',
+        treasureIds: ['c070', 'c071'],
       },
       {
         id: 'ch10-s03',
@@ -285,18 +308,22 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch11-s02',
         text: 'Use the Baron Key on the weapon and armor shop door. Push down in the bottom-right corner for a passage to 2 chests.',
+        treasureIds: ['c073'],
       },
       {
         id: 'ch11-s03',
         text: 'Open the western building with the key. Stand one tile below the stairs and walk east for the last chest. Baron is now done at 6 of 6 chests and 8 of 8 hidden items.',
+        treasureIds: ['c074'],
       },
       {
         id: 'ch11-s04',
-        text: 'Take the stairs down into the Old Waterway. Its 8 chests are mostly behind secret passages on B3 and B2. The checklist below has hints.',
+        text: 'Take the stairs down into the Old Waterway. B4 has 3 chests to the south. On B3, secret passages south from the water lead to the next chests; the third one starts at the foot of the stairs (push right). B2 has a passage left of the door at the top of the long stairs.',
+        treasureIds: ['c077', 'c078', 'c079', 'c080', 'c081'],
       },
       {
         id: 'ch11-s05',
         text: 'Check the right side of the save room on B1 for the Ancient Sword, then head up into the castle.',
+        treasureIds: ['c082'],
       },
     ],
   },
@@ -316,10 +343,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch12-s03',
         text: 'Go east to the roof and press the button that used to be guarded. The treasury behind it has 6 chests.',
+        treasureIds: ['c088'],
       },
       {
         id: 'ch12-s04',
         text: 'Loot the East Tower: 4 chests on 1F, 2 on 2F, a pot and 3 chests on 3F, and a pot on B1.',
+        treasureIds: ['c092', 'c094', 'h17', 'c097', 'h18'],
       },
       {
         id: 'ch12-s05',
@@ -339,19 +368,23 @@ export const walkthrough: WalkthroughChapter[] = [
     steps: [
       {
         id: 'ch13-s01',
-        text: 'Visit three Chocobo Forests for Gysahl Greens: southwest of Baron, the island northwest of Kaipo, and the mountain-ringed forest east of Fabul.',
+        text: 'Visit three Chocobo Forests for Gysahl Greens: southwest of Baron, the island northwest of Kaipo, and the mountain-ringed forest east of Fabul. In each one, search the middle of the dark grass clearing at the center.',
+        treasureIds: ['h19', 'h20', 'h21'],
       },
       {
         id: 'ch13-s02',
         text: 'Fly south of Fabul to Mythril. Search the grass for the Mythril Staff, Mythril Knife, and 5000 Gil.',
+        treasureIds: ['h22', 'h23', 'h24'],
       },
       {
         id: 'ch13-s03',
         text: 'Land at Mist. Search the secret passage east of the well (2 spots) and the grass by the pond northeast of the Inn.',
+        treasureIds: ['h26', 'h27'],
       },
       {
         id: 'ch13-s04',
         text: "Walk into the northwest house's fireplace for a passage with 4 chests, including the Rod of Change at the end.",
+        treasureIds: ['c100', 'c101'],
       },
     ],
   },
@@ -368,22 +401,27 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch14-s02',
         text: 'East Tower 1F: north to the wall, then west through a secret passage. On 2F, press the button on the right wall. Grab the pot and 3 chests, but don\'t drop down the hole yet.',
+        treasureIds: ['c102', 'h28', 'c105'],
       },
       {
         id: 'ch14-s03',
         text: 'From the right of the third pot, walk east to a secret passage. That chest is a Coeurl x2 + Lamia fight for the Blood Lance. Don\'t attack the Coeurls physically.',
+        treasureIds: ['c106'],
       },
       {
         id: 'ch14-s04',
         text: 'Drop through the hole for the Silver Hourglass, then take the underground passage south for 2 Ethers and a Mad Ogre x3 chest (Silver Apple).',
+        treasureIds: ['c107', 'c109', 'c110'],
       },
       {
         id: 'ch14-s05',
         text: 'West Tower 1F: two tiles south of the entrance, push east for a Skuldier x4 + Steel Golem chest (Sleep Blade). On 2F, check the pot, then push south between the pots for 2 chests. The Bomb Core is back down on 1F.',
+        treasureIds: ['c111', 'h29', 'c113', 'c114'],
       },
       {
         id: 'ch14-s06',
         text: 'Main hall: a secret passage east of the stairs hides a Hi-Potion. The Throne Room has passages on both sides with 5 chests total. That makes 19 chests and 2 hidden items here.',
+        treasureIds: ['c115', 'c117', 'c120'],
       },
     ],
   },
@@ -395,6 +433,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch15-s01',
         text: 'Land on the grass south of the waterfall town on the northwest continent. Walk north to a hidden Chocobo Forest by a bridge for Gysahl Greens.',
+        treasureIds: ['h30'],
       },
       {
         id: 'ch15-s02',
@@ -403,6 +442,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch15-s03',
         text: 'Cross the bridge north, go down to the river, and follow it north to a secret grassy area with a girl. Four hidden items are here.',
+        treasureIds: ['h34'],
       },
     ],
   },
@@ -414,10 +454,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch16-s01',
         text: 'Enter the castle, go through to the courtyard, then into the south building. Take the middle stairs down for a pot.',
+        treasureIds: ['h35'],
       },
       {
         id: 'ch16-s02',
         text: 'Take the right stairs down and step on the center button. Eight chests open.',
+        treasureIds: ['c128'],
       },
       {
         id: 'ch16-s03',
@@ -425,7 +467,8 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch16-s04',
-        text: 'Walk north through the woods to the Chocobo Village. Search the bushes in the southeast, then push east past the odd grass patch for two more spots. Ride the Black Chocobo.',
+        text: 'Walk north through the woods to the Chocobo Village. Search the bushes in the southeast, then go north to an odd patch of grass and push east into the trees for a secret path with two more spots at its end. Ride the Black Chocobo.',
+        treasureIds: ['h36', 'h38'],
       },
     ],
   },
@@ -441,6 +484,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch17-s02',
         text: 'Collect all 10 chests across B1-B4. There are save points on B3 and B4.',
+        treasureIds: ['c129', 'c130', 'c131', 'c133', 'c136', 'c137', 'c138'],
       },
       {
         id: 'ch17-s03',
@@ -454,6 +498,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch17-s05',
         text: 'Return the crystal to Troia. Then take the left stairs in the south building and say Yes to the lady behind the bars. B2 holds 18 chests, including 50000 Gil.',
+        treasureIds: ['c156'],
       },
     ],
   },
@@ -471,10 +516,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch18-s02',
         text: 'Grab the Flame Mail on 1F and the Fiery Hound chest on 2F (Flame Sword).',
+        treasureIds: ['c157', 'c158'],
       },
       {
         id: 'ch18-s03',
         text: 'On 4F, each of the three doors leads to a 5F room with chests: Hell Claw and Flame Shield (west), Gaia Hammer (middle), and Sage\'s Surplice (east).',
+        treasureIds: ['c159', 'c160', 'c161', 'c162'],
       },
       {
         id: 'ch18-s04',
@@ -499,6 +546,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch19-s02',
         text: 'Follow the narrow northwest passage to a patch of grass and search its south end for an Antarctic Wind.',
+        treasureIds: ['h39'],
       },
       {
         id: 'ch19-s03',
@@ -523,15 +571,18 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch20-s03',
         text: 'Loot the castle: pot near the Inn, the West Tower (fake-wall maze with 4 chests on 3F), and the East Tower (axe on 1F, pot on 2F, 4 chests on 3F).',
+        treasureIds: ['h40', 'h41', 'c166', 'c167', 'h42'],
       },
       {
         id: 'ch20-s04',
         text: 'Veteran Treasure Hunter (50% of chests) should pop around the East Tower 3F chests.',
+        treasureIds: ['c171'],
         achievementIds: ['veteran-treasure-hunter'],
       },
       {
         id: 'ch20-s05',
         text: 'B1 has 3 Gysahl Greens in pots. On B2, go west to two dwarves, then south and east for 3 Cottages. That makes 12 chests and 6 hidden items in the castle.',
+        treasureIds: ['h45', 'c174'],
       },
       {
         id: 'ch20-s06',
@@ -548,10 +599,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch21-s01',
         text: '1F has 3 chests. On 2F, grab the Green Beret, then open the Security Eye chest (Icebrand) in the south room and the Stone Golem chest (Ice Lance) in the northeast room.',
+        treasureIds: ['c175', 'c176', 'c177', 'c178', 'c179', 'c180'],
       },
       {
         id: 'ch21-s02',
         text: '3F and 4F: Cat Claw, Hi-Potion, Phoenix Down, Killer Bow, and Antarctic Wind, plus two more Security Eye chests (Ice Armor, Ice Shield).',
+        treasureIds: ['c183', 'c185', 'c186', 'c187'],
       },
       {
         id: 'ch21-s03',
@@ -561,6 +614,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch21-s04',
         text: '5F has 2 chests and 7F has a Dry Ether by the save room. That makes all 16.',
+        treasureIds: ['c188', 'c189', 'c190'],
       },
       {
         id: 'ch21-s05',
@@ -584,18 +638,22 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch22-s02',
         text: 'Hovercraft west over the shallows to the Cave of Eblan. B1 has 3 chests behind fake walls and past the stream. Bloody Bat is new here.',
+        treasureIds: ['c193'],
       },
       {
         id: 'ch22-s03',
         text: 'Eblan Settlement (no encounters): leftmost room, check the pot by the entrance and the second pot from the top on the west end.',
+        treasureIds: ['h47'],
       },
       {
         id: 'ch22-s04',
         text: 'Path to the Tower: 17 chests, several behind secret passages, plus a Steel Golem x2 chest (Blood Sword) off the save room.',
+        treasureIds: ['c195', 'c196', 'c197', 'c198', 'c200', 'c203', 'c204', 'c207', 'c208', 'c209'],
       },
       {
         id: 'ch22-s05',
         text: 'Meet the two NPCs to the north. Edge joins. Then push left against the west wall for the last chest, a Dry Ether.',
+        treasureIds: ['c210'],
       },
     ],
   },
@@ -608,10 +666,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch23-s01',
         text: 'B1: Unicorn Horn by the entrance and a Silver Hourglass northeast of the door. B2: a Mad Ogre x4 chest (Ogrekiller).',
+        treasureIds: ['c211', 'c212', 'c213'],
       },
       {
         id: 'ch23-s02',
         text: "B3: Lilith's Kiss. B4: Ashura. B5: 82000 Gil, past the left bridge.",
+        treasureIds: ['c214', 'c215', 'c216'],
       },
       {
         id: 'ch23-s03',
@@ -625,6 +685,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch23-s05',
         text: 'You fall into a trap on the way to the crystal. Grab the Hi-Potions on Underworld 8F and 6F before you leave.',
+        treasureIds: ['c217', 'c218'],
       },
     ],
   },
@@ -644,6 +705,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch24-s03',
         text: 'The northwest house has 4 chests and 2 pots.',
+        treasureIds: ['h48', 'c222', 'h49'],
       },
     ],
   },
@@ -659,6 +721,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch25-s02',
         text: 'Get all 11 chests. The Defender (great for Cecil) is a Warrior x5 chest at the north exit of the B3 secret passage.',
+        treasureIds: ['c223', 'c224', 'c225', 'c226', 'c227', 'c228', 'c229', 'c232', 'c233'],
       },
       {
         id: 'ch25-s03',
@@ -674,14 +737,17 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch26-s01',
         text: 'Grab the Ether, Bestiary, 5000 Gil, and 6000 Gil chests outside. North of the 6000 Gil chest, step on the shaded tile for a secret room with 4 chests.',
+        treasureIds: ['c234', 'c235', 'c236', 'c237', 'c241'],
       },
       {
         id: 'ch26-s02',
         text: 'Take the north warp, step off and straight back on, then walk south to reach the Rat Tail.',
+        treasureIds: ['c242'],
       },
       {
         id: 'ch26-s03',
         text: "In town, the northwest house has 2 chests. The library's warp leads to the Throne Room.",
+        treasureIds: ['c244'],
       },
       {
         id: 'ch26-s04',
@@ -711,18 +777,22 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch27-s02',
         text: 'First pass: B1 (2 chests), B3 (3 chests), B2 (4, then 5 more). Drop through the hole below the five chests to reach the warp to the Hidden Chamber.',
+        treasureIds: ['c246', 'c249', 'c253', 'c258'],
       },
       {
         id: 'ch27-s03',
         text: 'Hidden Chamber: save, then open the six monster-in-a-box chests one by one for the Red, White, and Blue Fangs, Moonring Blade, Avenger, and Medusa Arrow.',
+        treasureIds: ['c261', 'c264'],
       },
       {
         id: 'ch27-s04',
         text: 'Second pass: re-enter and collect the Elven Bow, Cottage and 1000 Gil, the Mage Masher (Tiny Toad x6 + Bog Witch), five chests on B1, and an Elixir on B3. That makes all 30.',
+        treasureIds: ['c265', 'c267', 'c268', 'c273', 'c274'],
       },
       {
         id: 'ch27-s05',
         text: 'Follow the B3 path south to the Sylvan Cottage. Talk to Yang and grab the Hell Claw and Cat Claw.',
+        treasureIds: ['c276'],
       },
     ],
   },
@@ -742,6 +812,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch28-s03',
         text: 'Every door here is a Trap Door fight and great EXP for Seasoned Hero. The cave has 19 chests across B1-B3.',
+        treasureIds: ['c277', 'c279', 'c281', 'c282', 'c283', 'c284', 'c287', 'c289', 'c290', 'c292', 'c293', 'c295'],
       },
       {
         id: 'ch28-s04',
@@ -770,6 +841,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch29-s03',
         text: "In the Underworld, visit Kokkol's Smithy in the southeast. Check the 1F pot and the 2F shelf, then give the Adamantite to the sleeping smith.",
+        treasureIds: ['h51'],
       },
       {
         id: 'ch29-s04',
@@ -800,6 +872,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch30-s03',
         text: 'Land northwest of the Crystal Palace. You can rest in the cabin below the bridge. In the Western Lunar Path, grab the Eukaryote/Prokaryote chest (Golden Apple) and two more chests near the north exit.',
+        treasureIds: ['c296', 'c298'],
       },
       {
         id: 'ch30-s04',
@@ -820,6 +893,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch31-s01',
         text: 'Land by the circular ledge on the east side of the moon. The 4 chests in the cave make up the Genji set: Gloves and Shield on B1, Armor and Helm on B2.',
+        treasureIds: ['c300', 'c302'],
       },
       {
         id: 'ch31-s02',
@@ -854,6 +928,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch32-s03',
         text: 'Chest of the Giant has 5 chests and the Stomach has 2. The Inner Path has the Last Arm chest (Elixir). There is a save point and shop past it.',
+        treasureIds: ['c307', 'c309', 'c310'],
       },
       {
         id: 'ch32-s04',
@@ -883,10 +958,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch33-s03',
         text: 'In the Land of Summons, check the bookshelves in the weapon shop and armor shop for two Grimoires.',
+        treasureIds: ['h53'],
       },
       {
         id: 'ch33-s04',
         text: 'In the Sylvan Cottage, check the bookshelf for the last hidden item in the game.',
+        treasureIds: ['h54'],
         achievementIds: ['item-detector'],
       },
     ],
@@ -904,6 +981,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch34-s02',
         text: "B1: a secret passage on the east wall leads to a Giant Warrior x2 chest (Black Garb). B2: a Selene Guardian/Dark Sage chest (Sage's Staff).",
+        treasureIds: ['c311', 'c312'],
       },
       {
         id: 'ch34-s03',
@@ -912,11 +990,13 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch34-s04',
-        text: 'The Dragon equipment set and other chests on B2-B4 are behind secret passages. Hints are in the checklist below.',
+        text: 'The Dragon equipment set and other chests on B2-B4 are behind secret passages. Directions are listed with each treasure.',
+        treasureIds: ['c313', 'c314', 'c315', 'c317', 'c318', 'c319'],
       },
       {
         id: 'ch34-s05',
         text: 'B4-B5: several monster-in-a-box chests (Behemoths and dragons) give the Crystal set and a Stardust Rod. The eastern room on B5 with the Red Fang is the Flan Princess room.',
+        treasureIds: ['c321', 'c322', 'c323', 'c324', 'c325', 'c326', 'c327', 'c328', 'c329'],
       },
       {
         id: 'ch34-s06',
@@ -925,6 +1005,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch34-s07',
         text: 'B6: cross the hidden bridge west for the Golden Apple, then warp up and grab the Behemoth chest (Protect Ring).',
+        treasureIds: ['c331', 'c332', 'c333', 'c334'],
       },
       {
         id: 'ch34-s08',
@@ -941,6 +1022,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch35-s01',
         text: 'Back past the hidden bridge, take the east stairs. A Selene Guardian x3 + Dark Sage chest holds the Minerva Bustier.',
+        treasureIds: ['c335'],
       },
       {
         id: 'ch35-s02',
@@ -950,15 +1032,18 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch35-s03',
         text: 'B7, third room: Boss: Lunasaurs x2. Ragnarok and the Holy Lance make this easy. You get two Ribbons.',
+        treasureIds: ['c337'],
       },
       {
         id: 'ch35-s04',
         text: 'B8: every encounter plays boss music, and Behemoth is a regular enemy here. Grab the Fuma Shuriken in the far west, then interact with the katana. Boss: Ogopogo. Don\'t use lightning (it counters with Whirl).',
+        treasureIds: ['c338'],
         subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'masamune' }],
       },
       {
         id: 'ch35-s05',
         text: 'B9 and B10: the last 4 chests in the game. Legendary Treasure Hunter pops after your next battle or area change.',
+        treasureIds: ['c340', 'c342'],
         achievementIds: ['legendary-treasure-hunter'],
       },
       {

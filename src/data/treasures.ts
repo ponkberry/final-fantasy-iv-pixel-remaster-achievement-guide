@@ -71,7 +71,7 @@ export const treasures: TreasureEntry[] = [
   { id: 'c067', kind: 'chest', location: 'Fabul Castle - West Tower 1F', contents: ['Bomb Fragment', 'Antarctic Wind', 'Potion'], chapterId: 'ch08-fabul' },
 
   // Mysidia
-  { id: 'h16', kind: 'hidden', location: 'Chocobo Forest (Mysidia)', contents: ['Gysahl Greens'], chapterId: 'ch09-mysidia' },
+  { id: 'h16', kind: 'hidden', location: 'Chocobo Forest (Mysidia)', contents: ['Gysahl Greens'], hint: 'Search the middle of the dark grass clearing at the center', chapterId: 'ch09-mysidia' },
 
   // Mt. Ordeals
   { id: 'c068', kind: 'chest', location: 'Mt. Ordeals - Entrance', contents: ['Potion'], hint: 'Northwest past the stairs', chapterId: 'ch10-mt-ordeals' },
@@ -98,9 +98,9 @@ export const treasures: TreasureEntry[] = [
   { id: 'h18', kind: 'hidden', location: 'Castle Baron - East Tower B1', contents: ['Elixir'], hint: 'Middle pot on the left side', chapterId: 'ch12-castle-baron' },
 
   // Airship Exploration
-  { id: 'h19', kind: 'hidden', location: 'Chocobo Forest (Baron)', contents: ['Gysahl Greens'], hint: 'Southwest of Baron', chapterId: 'ch13-airship-exploration' },
-  { id: 'h20', kind: 'hidden', location: 'Chocobo Forest (Southern Island)', contents: ['Gysahl Greens'], hint: 'Island northwest of Kaipo', chapterId: 'ch13-airship-exploration' },
-  { id: 'h21', kind: 'hidden', location: 'Chocobo Forest (Fabul)', contents: ['Gysahl Greens'], hint: 'Forest ringed by mountains east of Fabul', chapterId: 'ch13-airship-exploration' },
+  { id: 'h19', kind: 'hidden', location: 'Chocobo Forest (Baron)', contents: ['Gysahl Greens'], hint: 'Southwest of Baron; search the middle of the dark grass clearing at the center', chapterId: 'ch13-airship-exploration' },
+  { id: 'h20', kind: 'hidden', location: 'Chocobo Forest (Southern Island)', contents: ['Gysahl Greens'], hint: 'Island northwest of Kaipo; search the middle of the dark grass clearing at the center', chapterId: 'ch13-airship-exploration' },
+  { id: 'h21', kind: 'hidden', location: 'Chocobo Forest (Fabul)', contents: ['Gysahl Greens'], hint: 'Forest ringed by mountains east of Fabul; search the middle of the dark grass clearing at the center', chapterId: 'ch13-airship-exploration' },
   { id: 'h22', kind: 'hidden', location: 'Mythril', contents: ['Mythril Staff'], hint: 'Grass by the trees, north then east of the entrance', chapterId: 'ch13-airship-exploration' },
   { id: 'h23', kind: 'hidden', location: 'Mythril', contents: ['Mythril Knife'], hint: 'Grass far north, a little east', chapterId: 'ch13-airship-exploration' },
   { id: 'h24', kind: 'hidden', location: 'Mythril', contents: ['5000 Gil'], hint: 'Grass behind the weapon and armor shops', chapterId: 'ch13-airship-exploration' },
@@ -126,7 +126,7 @@ export const treasures: TreasureEntry[] = [
   { id: 'c120', kind: 'chest', location: 'Eblan Castle - Throne Room', contents: ['Gold Needle', 'Cottage', "Maiden's Kiss"], hint: 'Right secret passage (Cottage is reached from below)', chapterId: 'ch14-eblan-castle' },
 
   // Troia
-  { id: 'h30', kind: 'hidden', location: 'Chocobo Forest (Troia)', contents: ['Gysahl Greens'], hint: 'Hidden forest by a bridge, north of where you land', chapterId: 'ch15-troia' },
+  { id: 'h30', kind: 'hidden', location: 'Chocobo Forest (Troia)', contents: ['Gysahl Greens'], hint: 'Hidden forest by a bridge, north of where you land; search the middle of the dark grass clearing at the center', chapterId: 'ch15-troia' },
   { id: 'h34', kind: 'hidden', location: 'Troia', contents: ['1000 Gil', 'Decoy', 'Ether', 'Dry Ether'], hint: "Secret grassy area up the river's north stairs, four spots", chapterId: 'ch15-troia' },
 
   // Troia Castle
@@ -260,7 +260,7 @@ export const treasures: TreasureEntry[] = [
   { id: 'c295', kind: 'chest', location: 'Sealed Cavern - B3', contents: ['Dry Ether', 'X-Potion'], hint: 'Eastern door past the middle rope', chapterId: 'ch28-sealed-cavern' },
 
   // Side Quests: Part I
-  { id: 'h51', kind: 'hidden', location: "Kokkol's Smithy", contents: ['Remedy', 'Soma Drop'], hint: 'Marked pot on 1F, left shelf on 2F', chapterId: 'ch29-side-quests-1' },
+  { id: 'h51', kind: 'hidden', location: "Kokkol's Smithy", contents: ['Remedy', 'Soma Drop'], hint: 'On 1F, in the cluster of pots on the west wall, the inner pot second from the bottom; on 2F, the left shelf', chapterId: 'ch29-side-quests-1' },
 
   // The Moon
   { id: 'c296', kind: 'chest', location: 'Western Lunar Path', contents: ['Golden Apple'], hint: 'East at the first split (Eukaryote x2, Prokaryote x2)', monsterInABox: true, chapterId: 'ch30-the-moon' },

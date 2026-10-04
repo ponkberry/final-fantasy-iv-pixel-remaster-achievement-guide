@@ -77,6 +77,8 @@ export interface WalkthroughStep {
   achievementIds?: string[]
   /** specific sub-items of multi-part achievements (see Achievement.subItems) relevant to this step */
   subAchievementIds?: { achievementId: string; subItemId: string }[]
+  /** treasure ids (see treasures.ts) collected during this step, shown as per-item checkboxes */
+  treasureIds?: string[]
   /** urgent callout shown in red, e.g. marking a location as a one-time-only visit */
   warning?: string
 }

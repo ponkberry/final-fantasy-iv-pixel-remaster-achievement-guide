@@ -9,7 +9,7 @@ import { useBestiaryProgress } from '../hooks/useBestiaryProgress'
 import { useTreasureProgress } from '../hooks/useTreasureProgress'
 import { WalkthroughNav } from '../components/WalkthroughNav'
 import { ChapterBestiaryList } from '../components/ChapterBestiaryList'
-import { ChapterTreasureList } from '../components/ChapterTreasureList'
+import { StepTreasureList } from '../components/StepTreasureList'
 import { ConfirmResetDialog } from '../components/ConfirmResetDialog'
 
 export function WalkthroughPage() {
@@ -54,16 +54,7 @@ export function WalkthroughPage() {
     return map
   }, [])
 
-  const treasuresByChapter = useMemo(() => {
-    const map = new Map<string, typeof treasures>()
-    for (const entry of treasures) {
-      if (!entry.chapterId) continue
-      const list = map.get(entry.chapterId) ?? []
-      list.push(entry)
-      map.set(entry.chapterId, list)
-    }
-    return map
-  }, [])
+  const treasureById = useMemo(() => new Map(treasures.map((t) => [t.id, t])), [])
 
   const progressByChapter = useMemo(() => {
     const map: Record<string, { done: number; total: number }> = {}
@@ -163,6 +154,13 @@ export function WalkthroughPage() {
                           {step.text}
                         </span>
                       </label>
+                      <StepTreasureList
+                        entries={(step.treasureIds ?? [])
+                          .map((id) => treasureById.get(id))
+                          .filter((t) => t !== undefined)}
+                        isCollected={isCollected}
+                        onToggle={toggleTreasure}
+                      />
                       {step.warning && (
                         <p className="mt-2 ml-6 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm font-medium text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400">
                           ⚠ {step.warning}
@@ -244,13 +242,6 @@ export function WalkthroughPage() {
                 />
               )}
 
-              {!collapsed && (
-                <ChapterTreasureList
-                  entries={treasuresByChapter.get(chapter.id) ?? []}
-                  isCollected={isCollected}
-                  onToggle={toggleTreasure}
-                />
-              )}
             </section>
             )
           })}
