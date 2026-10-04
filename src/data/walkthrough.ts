@@ -1,0 +1,1043 @@
+import type { WalkthroughChapter } from '../types'
+
+// Sourced from "FINAL FANTASY IV | Walkthrough & Achievement Guide" by lylat and collaborators
+// (https://steamcommunity.com/sharedfiles/filedetails/?id=2596700264), written for the Pixel
+// Remaster. Step text is paraphrased, not copied. Treasure and bestiary checklists for each chapter
+// come from treasures.ts and bestiary.ts via their chapterId.
+export const walkthrough: WalkthroughChapter[] = [
+  {
+    id: 'ch01-prologue',
+    title: 'Prologue',
+    summary: 'Cecil returns to Baron with the Red Wings and is stripped of his command.',
+    steps: [
+      {
+        id: 'ch01-s01',
+        text: 'Watch the opening and win the two scripted airship battles. Floating Eyeball and Zu are added to the bestiary automatically.',
+      },
+      {
+        id: 'ch01-s02',
+        text: 'In Castle Baron 2F, head south down the stairs. On 1F, go east at the four-way junction and press the button behind the guard to reach three chests.',
+      },
+      {
+        id: 'ch01-s03',
+        text: "Head back west and upstairs, cross to the other tower, and follow the scenes outside to the large West Tower. Climb to the top and rest in Cecil's bed. Kain joins after the cutscene.",
+      },
+      {
+        id: 'ch01-s04',
+        text: 'Leave the castle and enter the town next to it.',
+      },
+    ],
+  },
+  {
+    id: 'ch02-baron-mist-cave',
+    title: 'Town of Baron and Mist Cave',
+    summary: 'Loot Baron before heading northwest through the Mist Cave.',
+    steps: [
+      {
+        id: 'ch02-s01',
+        text: "Baron has 8 hidden items and 3 chests available right now. Check the pot just east of the entrance, the bottom pot in the Inn's bedroom, and the swords upstairs in the Inn (a secret room with 3 chests).",
+      },
+      {
+        id: 'ch02-s02',
+        text: 'Outside, check the pot between the buildings north of the Inn, then follow the river path north to two spots at the pond.',
+      },
+      {
+        id: 'ch02-s03',
+        text: 'In the northeast, push into the tree above the old woman to find a secret path with three more hidden items. That completes all 8 hidden items here. The last 3 chests open later with the Baron Key.',
+      },
+      {
+        id: 'ch02-s04',
+        text: 'Head northwest from Baron, over the bridge, to the Mist Cave. Goblins, Helldivers, and Sword Rats roam the overworld here.',
+      },
+      {
+        id: 'ch02-s05',
+        text: 'Grab all 4 chests in the Mist Cave, then heal and save before the last set of stairs.',
+      },
+      {
+        id: 'ch02-s06',
+        text: 'Boss: Mist Dragon. Jump with Kain and attack with Cecil, but do nothing while it is in mist form to avoid its counter.',
+      },
+    ],
+  },
+  {
+    id: 'ch03-mist-kaipo',
+    title: 'Mist and Kaipo',
+    summary: 'The ring destroys Mist. Cecil carries the young summoner Rydia to Kaipo.',
+    steps: [
+      {
+        id: 'ch03-s01',
+        text: 'Enter Mist and walk east to trigger the scene. The fight against the girl is unwinnable, so just let it play out.',
+        achievementIds: ['inflammatory-decisions'],
+      },
+      {
+        id: 'ch03-s02',
+        text: 'Head northeast across the desert to Kaipo, the town at the oasis. Sand Worm is a rare desert encounter.',
+      },
+      {
+        id: 'ch03-s03',
+        text: 'Baron soldiers attack at the Inn. Kill the General first so he can\'t run away. If he escapes he may not count for the bestiary. Rydia joins afterward.',
+        warning: 'Defeat the General before the Baron Soldiers so the General entry registers properly.',
+      },
+      {
+        id: 'ch03-s04',
+        text: 'Check the northernmost pot north of the weapon shop for an Ether. Then visit the northeast house to see Rosa and leave town.',
+      },
+      {
+        id: 'ch03-s05',
+        text: "Optional: level Rydia a bit by using the Rod as an item in battle for free magic damage. Then head north to the Underground Waterway.",
+      },
+    ],
+  },
+  {
+    id: 'ch04-underground-waterway',
+    title: 'Underground Waterway',
+    summary: 'Tellah joins to chase his daughter through the waterway beneath the desert.',
+    steps: [
+      {
+        id: 'ch04-s01',
+        text: 'South Entrance: grab the two chests straight north, then head west. Talk to the old man on the way and Tellah joins.',
+      },
+      {
+        id: 'ch04-s02',
+        text: 'Climb the narrow waterfall to the east for the Iron Armlet. Then walk through the middle of the wide waterfall to find a hidden chamber with 3 chests.',
+      },
+      {
+        id: 'ch04-s03',
+        text: 'B2 and B3: follow the guide checklist below. Watch the magic tutorial in the southwest room, and look for the secret passage at the dead end on the second B2 visit (Feathered Cap).',
+      },
+      {
+        id: 'ch04-s04',
+        text: 'North Entrance: two chests down the first stairs and two more across the east bridge (including the Shadowblade, great on Cecil). That makes all 18 chests.',
+      },
+      {
+        id: 'ch04-s05',
+        text: 'Toadgre and Alligator appear near the North Entrance. If you miss Alligator here, it is common in the next dungeon.',
+      },
+    ],
+  },
+  {
+    id: 'ch05-subterranean-lake',
+    title: 'Subterranean Lake',
+    summary: 'Cross the lake to Damcyan and deal with the creature blocking the waterfall.',
+    steps: [
+      {
+        id: 'ch05-s01',
+        text: 'Enter the cave northwest of the waterway exit. On B2, take the south stairs for the Hades Helm and Hades Gloves.',
+      },
+      {
+        id: 'ch05-s02',
+        text: 'On B1, grab the Hades Armor and Hermes Shoes on the way east. Heal and save before touching the tentacles.',
+      },
+      {
+        id: 'ch05-s03',
+        text: 'Boss: Octomammoth. Summon Chocobo with Rydia, cast Thunder with Tellah, and attack with Cecil.',
+      },
+    ],
+  },
+  {
+    id: 'ch06-damcyan-antlion',
+    title: 'Damcyan Castle and Antlion Cave',
+    summary: 'Damcyan is in ruins. Prince Edward joins and you hunt for the Sand Ruby.',
+    steps: [
+      {
+        id: 'ch06-s01',
+        text: 'At Damcyan, go one tile south and walk east around the wall to the jail. Talk to the wounded guard, then hit the switch for 3 chests.',
+      },
+      {
+        id: 'ch06-s02',
+        text: 'Head down to Jail B1 for 6 chests and 3 pots. If you have been following along, Rookie Treasure Hunter pops around here.',
+        achievementIds: ['rookie-treasure-hunter'],
+      },
+      {
+        id: 'ch06-s03',
+        text: 'Grab the Tent in the 2F northeast corner, then go up to 3F for the story scenes. Tellah leaves and Edward joins. You get the Hovercraft.',
+      },
+      {
+        id: 'ch06-s04',
+        text: 'Hovercraft northeast and over the shallows to the Antlion Cave. It has 13 chests across B1 and B2, including a Lamia\'s Harp behind the B2 door and a save room on the way back up.',
+      },
+      {
+        id: 'ch06-s05',
+        text: "Boss: Antlion. It counters everything, but only for chip damage. Summon Chocobo and attack. You get the Sand Ruby.",
+      },
+    ],
+  },
+  {
+    id: 'ch07-kaipo-mt-hobs',
+    title: 'Kaipo Revisited and Mt. Hobs',
+    summary: 'Cure Rosa, then cross Mt. Hobs toward Fabul.',
+    steps: [
+      {
+        id: 'ch07-s01',
+        text: 'Take the Hovercraft back to Kaipo and use the Sand Ruby on Rosa. She joins. The Sahagin fight that follows is scripted.',
+      },
+      {
+        id: 'ch07-s02',
+        text: 'Head east of the Antlion Cave to Mt. Hobs. Rydia learns Fire at the entrance. The Trail on the west side has 4 chests and a save point.',
+      },
+      {
+        id: 'ch07-s03',
+        text: 'Grab the Holy Arrow on the Summit, then heal and save.',
+      },
+      {
+        id: 'ch07-s04',
+        text: 'Boss: Mom Bomb. Summon Chocobo and attack. After it explodes, clear the Bombs and Gray Bombs with multi-target attacks. Yang joins.',
+      },
+      {
+        id: 'ch07-s05',
+        text: 'Cockatrice here can drop the Cockatrice summon, but don\'t grind for it now. It is far easier with Sirens later. Leave via the East Entrance and pick up Gatlinger on the way to Fabul.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'cockatrice' }],
+      },
+    ],
+  },
+  {
+    id: 'ch08-fabul',
+    title: 'Fabul Castle',
+    summary: 'Defend Fabul from the Red Wings, then set sail.',
+    steps: [
+      {
+        id: 'ch08-s01',
+        text: 'Restock, then head up to the Throne Room to start the defense of Fabul. It is a series of back-to-back fights.',
+        warning: 'Kill each Captain before his Baron Warriors so he can\'t escape. The Captain entry may be missable.',
+      },
+      {
+        id: 'ch08-s02',
+        text: 'The final round against the Dragoon is unwinnable. Rosa is taken afterward.',
+      },
+      {
+        id: 'ch08-s03',
+        text: 'Throne Room: check the northwest pot, then stand on the button on the east side to open a passage with 3 chests.',
+      },
+      {
+        id: 'ch08-s04',
+        text: 'Talk to the innkeeper and answer Yes. Cecil gets the Deathbringer. Loot the East Tower (3F chest, 2F pot) and the West Tower 1F (1 pot, 3 chests).',
+      },
+      {
+        id: 'ch08-s05',
+        text: 'Leave the castle and board the ship to the east.',
+      },
+    ],
+  },
+  {
+    id: 'ch09-mysidia',
+    title: 'Mysidia',
+    summary: 'Shipwrecked and alone, Cecil goes to Mysidia to atone.',
+    steps: [
+      {
+        id: 'ch09-s01',
+        text: 'Walk east to Mysidia. Some NPCs will toad, pig, or poison you; talk to them again to undo it. Buy Hi-Potions if you can afford them.',
+      },
+      {
+        id: 'ch09-s02',
+        text: 'Speak to the Elder at the north end. Palom and Porom join.',
+      },
+      {
+        id: 'ch09-s03',
+        text: 'East, north through the woods, then east again to a large forest. Enter the Chocobo Forest and check the marked spot for Gysahl Greens.',
+      },
+      {
+        id: 'ch09-s04',
+        text: 'Head northeast to Mt. Ordeals.',
+      },
+    ],
+  },
+  {
+    id: 'ch10-mt-ordeals',
+    title: 'Mt. Ordeals',
+    summary: 'Climb the mountain and become a Paladin.',
+    steps: [
+      {
+        id: 'ch10-s01',
+        text: 'Palom clears the fire. Grab the two Potions on the Entrance, then meet Tellah on the Ridge. He rejoins.',
+      },
+      {
+        id: 'ch10-s02',
+        text: 'Grab both Ethers on the Pass (4 chests total in the dungeon). Lilith is easier to find on the way back down.',
+      },
+      {
+        id: 'ch10-s03',
+        text: 'Boss: Scarmiglione and Skullnants. They are undead, so use Fira and Cura and throw Hi-Potions.',
+      },
+      {
+        id: 'ch10-s04',
+        text: 'Heal, save, and cross the bridge. Boss: Scarmiglione (undead form). Hi-Potions deal about 500 each; spam Cura and Fira.',
+      },
+      {
+        id: 'ch10-s05',
+        text: 'Touch the tablet in the Hall of Mirrors. Cecil becomes a Paladin. Against the Dark Knight, just Defend every turn until it ends.',
+        achievementIds: ['the-lights-chosen'],
+      },
+      {
+        id: 'ch10-s06',
+        text: 'Paladin Cecil starts at level 1. Equip him and gain levels on the way out, then return to Mysidia, speak to the Elder, and take the warp in the eastern building to Baron.',
+      },
+    ],
+  },
+  {
+    id: 'ch11-baron-old-waterway',
+    title: 'Baron Revisited: Part I',
+    summary: 'Back in Baron to find Yang and the Old Waterway into the castle.',
+    steps: [
+      {
+        id: 'ch11-s01',
+        text: 'Go upstairs in the Inn and talk to Yang. Beat the Baron Guards (save MP), then the Monk with strong spells. Yang rejoins and you get the Baron Key.',
+      },
+      {
+        id: 'ch11-s02',
+        text: 'Use the Baron Key on the weapon and armor shop door. Push down in the bottom-right corner for a passage to 2 chests.',
+      },
+      {
+        id: 'ch11-s03',
+        text: 'Open the western building with the key. Stand one tile below the stairs and walk east for the last chest. Baron is now done at 6 of 6 chests and 8 of 8 hidden items.',
+      },
+      {
+        id: 'ch11-s04',
+        text: 'Take the stairs down into the Old Waterway. Its 8 chests are mostly behind secret passages on B3 and B2. The checklist below has hints.',
+      },
+      {
+        id: 'ch11-s05',
+        text: 'Check the right side of the save room on B1 for the Ancient Sword, then head up into the castle.',
+      },
+    ],
+  },
+  {
+    id: 'ch12-castle-baron',
+    title: 'Baron Revisited: Part II',
+    summary: 'Infiltrate Castle Baron and confront the false king.',
+    steps: [
+      {
+        id: 'ch12-s01',
+        text: "You can rest in Cecil's room at the top of the West Tower any time. In the main hall, Baigan \"joins\" and then betrays you.",
+      },
+      {
+        id: 'ch12-s02',
+        text: 'Boss: Baigan with Right and Left Arm. He reflects magic, but Quake goes through. Palom wins this in a few turns.',
+      },
+      {
+        id: 'ch12-s03',
+        text: 'Go east to the roof and press the button that used to be guarded. The treasury behind it has 6 chests.',
+      },
+      {
+        id: 'ch12-s04',
+        text: 'Loot the East Tower: 4 chests on 1F, 2 on 2F, a pot and 3 chests on 3F, and a pot on B1.',
+      },
+      {
+        id: 'ch12-s05',
+        text: 'Heal, save, and talk to the King in the Throne Room. Boss: Cagnazzo. Use Thundaga with Tellah and Thundara with Palom.',
+        achievementIds: ['overcoming-grief'],
+      },
+      {
+        id: 'ch12-s06',
+        text: 'Cid joins and you get the airship Enterprise.',
+      },
+    ],
+  },
+  {
+    id: 'ch13-airship-exploration',
+    title: 'Airship Exploration',
+    summary: 'Use the airship to sweep up Chocobo Forests, Mythril, and Mist.',
+    steps: [
+      {
+        id: 'ch13-s01',
+        text: 'Visit three Chocobo Forests for Gysahl Greens: southwest of Baron, the island northwest of Kaipo, and the mountain-ringed forest east of Fabul.',
+      },
+      {
+        id: 'ch13-s02',
+        text: 'Fly south of Fabul to Mythril. Search the grass for the Mythril Staff, Mythril Knife, and 5000 Gil.',
+      },
+      {
+        id: 'ch13-s03',
+        text: 'Land at Mist. Search the secret passage east of the well (2 spots) and the grass by the pond northeast of the Inn.',
+      },
+      {
+        id: 'ch13-s04',
+        text: "Walk into the northwest house's fireplace for a passage with 4 chests, including the Rod of Change at the end.",
+      },
+    ],
+  },
+  {
+    id: 'ch14-eblan-castle',
+    title: 'Eblan Castle',
+    summary: 'An optional early raid on the ruined castle of Eblan.',
+    warning: "Eblan's monster-in-a-box chests (especially the Mad Ogres) are very tough this early. Save often, or come back after Troia.",
+    steps: [
+      {
+        id: 'ch14-s01',
+        text: 'Land by the ruined castle on the southwest island. Fight Roc Baby, Roc, Mors, Ironback, Black Lizard, and Fiery Hound outside.',
+      },
+      {
+        id: 'ch14-s02',
+        text: 'East Tower 1F: north to the wall, then west through a secret passage. On 2F, press the button on the right wall. Grab the pot and 3 chests, but don\'t drop down the hole yet.',
+      },
+      {
+        id: 'ch14-s03',
+        text: 'From the right of the third pot, walk east to a secret passage. That chest is a Coeurl x2 + Lamia fight for the Blood Lance. Don\'t attack the Coeurls physically.',
+      },
+      {
+        id: 'ch14-s04',
+        text: 'Drop through the hole for the Silver Hourglass, then take the underground passage south for 2 Ethers and a Mad Ogre x3 chest (Silver Apple).',
+      },
+      {
+        id: 'ch14-s05',
+        text: 'West Tower 1F: two tiles south of the entrance, push east for a Skuldier x4 + Steel Golem chest (Sleep Blade). On 2F, check the pot, then push south between the pots for 2 chests. The Bomb Core is back down on 1F.',
+      },
+      {
+        id: 'ch14-s06',
+        text: 'Main hall: a secret passage east of the stairs hides a Hi-Potion. The Throne Room has passages on both sides with 5 chests total. That makes 19 chests and 2 hidden items here.',
+      },
+    ],
+  },
+  {
+    id: 'ch15-troia',
+    title: 'Troia',
+    summary: 'Gear up for the Magnetic Cavern in the town of Troia.',
+    steps: [
+      {
+        id: 'ch15-s01',
+        text: 'Land on the grass south of the waterfall town on the northwest continent. Walk north to a hidden Chocobo Forest by a bridge for Gysahl Greens.',
+      },
+      {
+        id: 'ch15-s02',
+        text: 'In Troia, buy 2 Great Bows and 2 Fire Arrows. The next dungeon bans metal gear.',
+      },
+      {
+        id: 'ch15-s03',
+        text: 'Cross the bridge north, go down to the river, and follow it north to a secret grassy area with a girl. Four hidden items are here.',
+      },
+    ],
+  },
+  {
+    id: 'ch16-troia-castle',
+    title: 'Troia Castle',
+    summary: 'Learn about the stolen Earth Crystal and get the Twin Harp.',
+    steps: [
+      {
+        id: 'ch16-s01',
+        text: 'Enter the castle, go through to the courtyard, then into the south building. Take the middle stairs down for a pot.',
+      },
+      {
+        id: 'ch16-s02',
+        text: 'Take the right stairs down and step on the center button. Eight chests open.',
+      },
+      {
+        id: 'ch16-s03',
+        text: 'Visit Edward in the infirmary (west side) to get the Twin Harp.',
+      },
+      {
+        id: 'ch16-s04',
+        text: 'Walk north through the woods to the Chocobo Village. Search the bushes in the southeast, then push east past the odd grass patch for two more spots. Ride the Black Chocobo.',
+      },
+    ],
+  },
+  {
+    id: 'ch17-magnetic-cavern',
+    title: 'Magnetic Cavern',
+    summary: 'Retrieve the Earth Crystal from the Dark Elf.',
+    steps: [
+      {
+        id: 'ch17-s01',
+        text: 'Fly the Black Chocobo east along the river to the cave in the mountains. Before going in, swap everyone out of metal gear: Great Bows and Fire Arrows for Cecil and Cid, everyone except Yang in the back row.',
+      },
+      {
+        id: 'ch17-s02',
+        text: 'Collect all 10 chests across B1-B4. There are save points on B3 and B4.',
+      },
+      {
+        id: 'ch17-s03',
+        text: 'Mind Flayer here drops the Mindflayer summon. Save this grind for later with Sirens.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'mindflayer' }],
+      },
+      {
+        id: 'ch17-s04',
+        text: 'Boss: Dark Elf. The first round is unwinnable. Edward plays the harp, so re-equip your real gear and fight it again. It turns into the Dark Dragon near the end.',
+      },
+      {
+        id: 'ch17-s05',
+        text: 'Return the crystal to Troia. Then take the left stairs in the south building and say Yes to the lady behind the bars. B2 holds 18 chests, including 50000 Gil.',
+      },
+    ],
+  },
+  {
+    id: 'ch18-tower-of-zot',
+    title: 'Tower of Zot',
+    summary: 'Trade the Earth Crystal for Rosa in the floating tower.',
+    warning: 'One-visit dungeon. Get all 6 chests and every bestiary entry before beating the Magus Sisters. You can still step on the 1F entry point to leave while the sisters are alive.',
+    steps: [
+      {
+        id: 'ch18-s01',
+        text: 'Bestiary here: Purple Bavarois, Puppet, Sorceress, Black Knight, Centaur Knight, Gremlin (more common on 2F), Soldieress, Puppeteer, Ice Lizard, Cold Beast, and Hell Turtle (1F only).',
+        warning: 'Every monster here is missable.',
+      },
+      {
+        id: 'ch18-s02',
+        text: 'Grab the Flame Mail on 1F and the Fiery Hound chest on 2F (Flame Sword).',
+      },
+      {
+        id: 'ch18-s03',
+        text: 'On 4F, each of the three doors leads to a 5F room with chests: Hell Claw and Flame Shield (west), Gaia Hammer (middle), and Sage\'s Surplice (east).',
+      },
+      {
+        id: 'ch18-s04',
+        text: 'Save in the bottom room on 5F. Boss: Magus Sisters. Kill Cindy first, since she revives the others.',
+      },
+      {
+        id: 'ch18-s05',
+        text: 'After the scenes on 6F, wake Kain. Rosa and Kain join. Boss: Barbariccia. Keep Kain jumping and cure petrification with Esuna.',
+        achievementIds: ['reforged-love'],
+      },
+    ],
+  },
+  {
+    id: 'ch19-agart',
+    title: 'Agart',
+    summary: 'Use the Magma Rock to open the way to the Underworld.',
+    steps: [
+      {
+        id: 'ch19-s01',
+        text: 'Get the Magma Rock in Baron. Fly south to Agart, on the small island between the southern continents.',
+      },
+      {
+        id: 'ch19-s02',
+        text: 'Follow the narrow northwest passage to a patch of grass and search its south end for an Antarctic Wind.',
+      },
+      {
+        id: 'ch19-s03',
+        text: 'Use the Magma Rock on the well, then land on the crater just north of town.',
+        achievementIds: ['to-the-depths'],
+      },
+    ],
+  },
+  {
+    id: 'ch20-dwarven-castle',
+    title: 'Dwarven Castle',
+    summary: 'Defend the dwarves\' crystal from Golbez and get Rydia back.',
+    steps: [
+      {
+        id: 'ch20-s01',
+        text: 'Heal, save, and head north to the Throne Room. Cid leaves. Kill all the Brinas and one Calco for the bestiary, and let the rest merge into Calcobrena for extra EXP.',
+      },
+      {
+        id: 'ch20-s02',
+        text: 'Boss: Golbez. Pass turns until the scene plays. Rydia returns, and Bio plus attacks finish him quickly.',
+      },
+      {
+        id: 'ch20-s03',
+        text: 'Loot the castle: pot near the Inn, the West Tower (fake-wall maze with 4 chests on 3F), and the East Tower (axe on 1F, pot on 2F, 4 chests on 3F).',
+      },
+      {
+        id: 'ch20-s04',
+        text: 'Veteran Treasure Hunter (50% of chests) should pop around the East Tower 3F chests.',
+        achievementIds: ['veteran-treasure-hunter'],
+      },
+      {
+        id: 'ch20-s05',
+        text: 'B1 has 3 Gysahl Greens in pots. On B2, go west to two dwarves, then south and east for 3 Cottages. That makes 12 chests and 6 hidden items in the castle.',
+      },
+      {
+        id: 'ch20-s06',
+        text: 'Leave through the Dwarven Base and follow the path northwest to the Tower of Babel. Goblin Captain, Armadillo, and Magma Tortoise are on the way.',
+      },
+    ],
+  },
+  {
+    id: 'ch21-babel-underworld',
+    title: 'Tower of Babel (Underworld)',
+    summary: 'Storm the tower to stop Dr. Lugae and protect the last crystal.',
+    warning: 'Treat this as a one-visit dungeon: grab all 16 chests and every bestiary entry before Dr. Lugae.',
+    steps: [
+      {
+        id: 'ch21-s01',
+        text: '1F has 3 chests. On 2F, grab the Green Beret, then open the Security Eye chest (Icebrand) in the south room and the Stone Golem chest (Ice Lance) in the northeast room.',
+      },
+      {
+        id: 'ch21-s02',
+        text: '3F and 4F: Cat Claw, Hi-Potion, Phoenix Down, Killer Bow, and Antarctic Wind, plus two more Security Eye chests (Ice Armor, Ice Shield).',
+      },
+      {
+        id: 'ch21-s03',
+        text: "Naga only appears when a Security Eye summons it. Don't kill the Eye before it calls one in.",
+        warning: 'Naga is easy to miss - let a Security Eye summon it first.',
+      },
+      {
+        id: 'ch21-s04',
+        text: '5F has 2 chests and 7F has a Dry Ether by the save room. That makes all 16.',
+      },
+      {
+        id: 'ch21-s05',
+        text: 'Boss: Doctor and Barnabas, then Dr. Lugae. Barnabas-Z only appears if Barnabas dies before the Doctor; the lylat guide reports it isn\'t needed for 100%. Close the battle normally so the entries save.',
+      },
+      {
+        id: 'ch21-s06',
+        text: "Use Dr. Lugae's Key on the 5F door and beat the three Goblin Captains. After the scenes, walk out of the tower on foot.",
+      },
+    ],
+  },
+  {
+    id: 'ch22-cave-of-eblan',
+    title: 'Cave of Eblan',
+    summary: 'Fit the airship with a hook and find the route to the Tower of Babel from above.',
+    steps: [
+      {
+        id: 'ch22-s01',
+        text: 'At Castle Baron, talk to the engineer in the backyard to fit the hook. Pick up the Hovercraft by Mt. Hobs and drop it in the Eblan area.',
+      },
+      {
+        id: 'ch22-s02',
+        text: 'Hovercraft west over the shallows to the Cave of Eblan. B1 has 3 chests behind fake walls and past the stream. Bloody Bat is new here.',
+      },
+      {
+        id: 'ch22-s03',
+        text: 'Eblan Settlement (no encounters): leftmost room, check the pot by the entrance and the second pot from the top on the west end.',
+      },
+      {
+        id: 'ch22-s04',
+        text: 'Path to the Tower: 17 chests, several behind secret passages, plus a Steel Golem x2 chest (Blood Sword) off the save room.',
+      },
+      {
+        id: 'ch22-s05',
+        text: 'Meet the two NPCs to the north. Edge joins. Then push left against the west wall for the last chest, a Dry Ether.',
+      },
+    ],
+  },
+  {
+    id: 'ch23-babel-second-trip',
+    title: 'Tower of Babel: Second Trip',
+    summary: 'Edge leads the way into the tower from the surface.',
+    warning: 'One-visit dungeon. Get all 8 chests and every bestiary entry here (Sorcerer, Ghost Knight, Lamia Matriarch, Grudger, Green Dragon, Mythril Golem, Balloon).',
+    steps: [
+      {
+        id: 'ch23-s01',
+        text: 'B1: Unicorn Horn by the entrance and a Silver Hourglass northeast of the door. B2: a Mad Ogre x4 chest (Ogrekiller).',
+      },
+      {
+        id: 'ch23-s02',
+        text: "B3: Lilith's Kiss. B4: Ashura. B5: 82000 Gil, past the left bridge.",
+      },
+      {
+        id: 'ch23-s03',
+        text: 'Green Dragon is extremely rare, and Lamia Matriarch and Mythril Golem stick to the lower floors. Take your time here.',
+      },
+      {
+        id: 'ch23-s04',
+        text: 'The fight against the King and Queen of Eblan is unwinnable. Boss: Rubicante. Spam Shiva while his cape is open; never use fire, and avoid physical attacks (he counters).',
+        achievementIds: ['inflamed-anger'],
+      },
+      {
+        id: 'ch23-s05',
+        text: 'You fall into a trap on the way to the crystal. Grab the Hi-Potions on Underworld 8F and 6F before you leave.',
+      },
+    ],
+  },
+  {
+    id: 'ch24-tomra',
+    title: 'New Airship and Tomra',
+    summary: 'Upgrade the Falcon to fly over lava and visit Tomra.',
+    steps: [
+      {
+        id: 'ch24-s01',
+        text: "Talk to King Giott in the Dwarven Castle for Luka's Necklace, then visit the hospital on B1. The Falcon can now fly over lava.",
+      },
+      {
+        id: 'ch24-s02',
+        text: 'Fly to Tomra in the southwest. Diamond gear and a Gold Hairpin are good upgrades if you have the gil.',
+      },
+      {
+        id: 'ch24-s03',
+        text: 'The northwest house has 4 chests and 2 pots.',
+      },
+    ],
+  },
+  {
+    id: 'ch25-cave-of-summons',
+    title: 'Cave of Summons',
+    summary: 'A lava cave leading to the realm of the Eidolons.',
+    steps: [
+      {
+        id: 'ch25-s01',
+        text: 'Fly northwest over the lava to the small island cave. Cast Float on everyone on every floor, since it wears off between floors.',
+      },
+      {
+        id: 'ch25-s02',
+        text: 'Get all 11 chests. The Defender (great for Cecil) is a Warrior x5 chest at the north exit of the B3 secret passage.',
+      },
+      {
+        id: 'ch25-s03',
+        text: 'Mini Satanas counter with Confuse, and Summoners can call in other monsters from this cave. Step on the warp pad on B3 to reach the Land of Summons.',
+      },
+    ],
+  },
+  {
+    id: 'ch26-land-of-summons',
+    title: 'Land of Summons',
+    summary: 'Challenge the Eidolon Queen and King for Asura and Leviathan.',
+    steps: [
+      {
+        id: 'ch26-s01',
+        text: 'Grab the Ether, Bestiary, 5000 Gil, and 6000 Gil chests outside. North of the 6000 Gil chest, step on the shaded tile for a secret room with 4 chests.',
+      },
+      {
+        id: 'ch26-s02',
+        text: 'Take the north warp, step off and straight back on, then walk south to reach the Rat Tail.',
+      },
+      {
+        id: 'ch26-s03',
+        text: "In town, the northwest house has 2 chests. The library's warp leads to the Throne Room.",
+      },
+      {
+        id: 'ch26-s04',
+        text: 'Boss: Asura. Cast Reflect on her so her buffs bounce to your party, and keep Curaja going.',
+        subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'asura' }],
+      },
+      {
+        id: 'ch26-s05',
+        text: 'Boss: Leviathan. He opens with Tidal Wave. Curaja every turn and use Thunder attacks (Blitz with Edge).',
+        subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'leviathan' }],
+      },
+      {
+        id: 'ch26-s06',
+        text: 'The 2 hidden Grimoires here only show up much later. The walkthrough reminds you in Side Quests: Part II.',
+      },
+    ],
+  },
+  {
+    id: 'ch27-sylvan-cave',
+    title: 'Sylvan Cave',
+    summary: '30 chests and the Sylvan Cottage, where Yang is recovering.',
+    steps: [
+      {
+        id: 'ch27-s01',
+        text: 'Fly to the cave in the northwest corner of the Underworld. Cast Float on every floor. Leviathan one-shots most groups here.',
+      },
+      {
+        id: 'ch27-s02',
+        text: 'First pass: B1 (2 chests), B3 (3 chests), B2 (4, then 5 more). Drop through the hole below the five chests to reach the warp to the Hidden Chamber.',
+      },
+      {
+        id: 'ch27-s03',
+        text: 'Hidden Chamber: save, then open the six monster-in-a-box chests one by one for the Red, White, and Blue Fangs, Moonring Blade, Avenger, and Medusa Arrow.',
+      },
+      {
+        id: 'ch27-s04',
+        text: 'Second pass: re-enter and collect the Elven Bow, Cottage and 1000 Gil, the Mage Masher (Tiny Toad x6 + Bog Witch), five chests on B1, and an Elixir on B3. That makes all 30.',
+      },
+      {
+        id: 'ch27-s05',
+        text: 'Follow the B3 path south to the Sylvan Cottage. Talk to Yang and grab the Hell Claw and Cat Claw.',
+      },
+    ],
+  },
+  {
+    id: 'ch28-sealed-cavern',
+    title: 'Sealed Cavern',
+    summary: 'Unlock the Sealed Cavern with Luka\'s Necklace for the last dark crystal.',
+    steps: [
+      {
+        id: 'ch28-s01',
+        text: 'Outside the Sylvan Cave, fight Blood Flower, Chrysalis, and Hell Flapper. On the three-tile peninsula just south, look for Gloomwing, Gorgon, Crawler, Tarantula, and the rare Yellow Dragon.',
+      },
+      {
+        id: 'ch28-s02',
+        text: "Land at the cave northwest of Tomra and open the door with Luka's Necklace.",
+      },
+      {
+        id: 'ch28-s03',
+        text: 'Every door here is a Trap Door fight and great EXP for Seasoned Hero. The cave has 19 chests across B1-B3.',
+      },
+      {
+        id: 'ch28-s04',
+        text: 'Take the Dark Crystal on B5. Boss: Demon Wall. Spam Leviathan before it closes in.',
+      },
+      {
+        id: 'ch28-s05',
+        text: 'Kain leaves on the way out. Visit the Dwarven Castle throne room so the Falcon can travel between worlds through the northeast crater.',
+      },
+    ],
+  },
+  {
+    id: 'ch29-side-quests-1',
+    title: 'Side Quests: Part I',
+    summary: 'Sylph, the Adamantite, and Kokkol\'s Smithy.',
+    warning: 'The Sylph sidequest is missable. Finish it before triggering the Lunar Whale scene in Mysidia.',
+    steps: [
+      {
+        id: 'ch29-s01',
+        text: "In Fabul, go to 2F, exit south, and climb the West Tower to 3F. Yang's wife gives you the Frying Pan.",
+      },
+      {
+        id: 'ch29-s02',
+        text: 'Board the Enterprise near Eblan, carry the Hovercraft to Mythril, and drive southeast to the Adamant Grotto. Trade the Rat Tail for Adamantite.',
+      },
+      {
+        id: 'ch29-s03',
+        text: "In the Underworld, visit Kokkol's Smithy in the southeast. Check the 1F pot and the 2F shelf, then give the Adamantite to the sleeping smith.",
+      },
+      {
+        id: 'ch29-s04',
+        text: 'Return to the Sylvan Cottage (Float on every floor) and use the Frying Pan on Yang. Rydia learns Sylph.',
+        subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'sylph' }],
+      },
+      {
+        id: 'ch29-s05',
+        text: "Return the Frying Pan to Yang's wife for the Knife, a throwing weapon that always deals 9999.",
+      },
+    ],
+  },
+  {
+    id: 'ch30-the-moon',
+    title: 'The Moon',
+    summary: 'Get Excalibur, board the Lunar Whale, and meet FuSoYa.',
+    steps: [
+      {
+        id: 'ch30-s01',
+        text: 'Walk north in Mysidia to raise the Lunar Whale. Before boarding, take the Falcon to Kokkol\'s Smithy and pick up Excalibur.',
+        achievementIds: ['sword-of-myth'],
+      },
+      {
+        id: 'ch30-s02',
+        text: 'Board the Lunar Whale and use the Crystal to fly to the moon.',
+        achievementIds: ['to-the-moon'],
+      },
+      {
+        id: 'ch30-s03',
+        text: 'Land northwest of the Crystal Palace. You can rest in the cabin below the bridge. In the Western Lunar Path, grab the Eukaryote/Prokaryote chest (Golden Apple) and two more chests near the north exit.',
+      },
+      {
+        id: 'ch30-s04',
+        text: 'Go through the Eastern Lunar Path to the Crystal Palace. FuSoYa joins.',
+      },
+      {
+        id: 'ch30-s05',
+        text: 'Dark Grenades here (and Balloons) rarely drop the Bomb summon. Save the grind for the cleanup chapter.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'bomb' }],
+      },
+    ],
+  },
+  {
+    id: 'ch31-cave-of-bahamut',
+    title: 'Cave of Bahamut and Hummingway Home',
+    summary: 'Prove yourself to Bahamut and stop by the Hummingways.',
+    steps: [
+      {
+        id: 'ch31-s01',
+        text: 'Land by the circular ledge on the east side of the moon. The 4 chests in the cave make up the Genji set: Gloves and Shield on B1, Armor and Helm on B2.',
+      },
+      {
+        id: 'ch31-s02',
+        text: 'Each of three wizards turns into a Behemoth. It counters every hit, so use Leviathan, Flare, and attacks with heals every turn.',
+      },
+      {
+        id: 'ch31-s03',
+        text: 'Boss: Bahamut. Reflect everyone first. Megaflare at 0 bounces back for 9999.',
+        subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'bahamut' }],
+      },
+      {
+        id: 'ch31-s04',
+        text: 'Visit the Hummingway Home in the lone cave south of the Crystal Palace. It counts toward Adventurous Wayfarer, and they sell Sirens (3000 Gil) and Gysahl Whistles.',
+      },
+    ],
+  },
+  {
+    id: 'ch32-giant-of-babel',
+    title: 'The Giant of Babel',
+    summary: 'Board the Giant and destroy its CPU.',
+    warning: 'One-visit dungeon. Get all 8 chests and every bestiary entry before the CPU.',
+    steps: [
+      {
+        id: 'ch32-s01',
+        text: 'Bestiary here: Beamer, Centaurion, Mech Soldier, Searcher, Last Arm (from a chest), Giant Soldier, and Mech Dragon. Mech Dragon only spawns in the Stairwell right before the bosses.',
+        warning: 'Every monster here is missable.',
+      },
+      {
+        id: 'ch32-s02',
+        text: 'Steal Sirens from Searchers with Edge, aiming for a big stack (99 is ideal). They make the rare-drop grinds much faster. You can also buy them at the Hummingway Home.',
+      },
+      {
+        id: 'ch32-s03',
+        text: 'Chest of the Giant has 5 chests and the Stomach has 2. The Inner Path has the Last Arm chest (Elixir). There is a save point and shop past it.',
+      },
+      {
+        id: 'ch32-s04',
+        text: 'Boss: Elemental Lords. Hit each form\'s weakness: fire on Scarmiglione, lightning on Cagnazzo, and Bahamut/Flare/Holy on Barbariccia and Rubicante.',
+        achievementIds: ['rematch'],
+      },
+      {
+        id: 'ch32-s05',
+        text: 'Boss: CPU. Destroy the Defense Node, focus the CPU, and leave the Attack Node for last. Killing both nodes makes it revive them. FuSoYa leaves and Kain rejoins.',
+      },
+    ],
+  },
+  {
+    id: 'ch33-side-quests-2',
+    title: 'Side Quests: Part II',
+    summary: 'Odin and the last three hidden Grimoires.',
+    steps: [
+      {
+        id: 'ch33-s01',
+        text: 'Head back to the Blue Planet. In Castle Baron, go East Tower 1F, then B1, then B2, and approach the throne.',
+      },
+      {
+        id: 'ch33-s02',
+        text: 'Boss: Odin. You have about one minute. Use Bahamut, Holy, Jump, and attacks.',
+        subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'odin' }],
+      },
+      {
+        id: 'ch33-s03',
+        text: 'In the Land of Summons, check the bookshelves in the weapon shop and armor shop for two Grimoires.',
+      },
+      {
+        id: 'ch33-s04',
+        text: 'In the Sylvan Cottage, check the bookshelf for the last hidden item in the game.',
+        achievementIds: ['item-detector'],
+      },
+    ],
+  },
+  {
+    id: 'ch34-lunar-subterrane',
+    title: 'Lunar Subterrane: Upper Floors',
+    summary: 'The final dungeon, from the Crystal Palace down to B6.',
+    steps: [
+      {
+        id: 'ch34-s01',
+        text: 'Step on the Crystal Palace 2F warp tile. Arriving counts as the last new location.',
+        achievementIds: ['adventurous-wayfarer'],
+      },
+      {
+        id: 'ch34-s02',
+        text: "B1: a secret passage on the east wall leads to a Giant Warrior x2 chest (Black Garb). B2: a Selene Guardian/Dark Sage chest (Sage's Staff).",
+      },
+      {
+        id: 'ch34-s03',
+        text: 'B3: interact with the katana. Boss: White Dragon. It counters with Slow, so keep Haste on everyone.',
+        subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'murasame' }],
+      },
+      {
+        id: 'ch34-s04',
+        text: 'The Dragon equipment set and other chests on B2-B4 are behind secret passages. Hints are in the checklist below.',
+      },
+      {
+        id: 'ch34-s05',
+        text: 'B4-B5: several monster-in-a-box chests (Behemoths and dragons) give the Crystal set and a Stardust Rod. The eastern room on B5 with the Red Fang is the Flan Princess room.',
+      },
+      {
+        id: 'ch34-s06',
+        text: 'Optional: use Sirens in the Flan Princess room. The 1/64 Pink Tail drop is needed for Tail of Myth, so most players leave this grind for after the game.',
+      },
+      {
+        id: 'ch34-s07',
+        text: 'B6: cross the hidden bridge west for the Golden Apple, then warp up and grab the Behemoth chest (Protect Ring).',
+      },
+      {
+        id: 'ch34-s08',
+        text: 'Boss: Dark Bahamut, at the sword on the pedestal. Heal after its opening Megaflare, Reflect the party, then spam Bahamut so its counter bounces back.',
+        subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'ragnarok' }],
+      },
+    ],
+  },
+  {
+    id: 'ch35-lunar-depths',
+    title: 'Lunar Subterrane: The Depths',
+    summary: 'Plague, the Lunasaurs, Ogopogo, and Zeromus.',
+    steps: [
+      {
+        id: 'ch35-s01',
+        text: 'Back past the hidden bridge, take the east stairs. A Selene Guardian x3 + Dark Sage chest holds the Minerva Bustier.',
+      },
+      {
+        id: 'ch35-s02',
+        text: 'B7, second room: interact with the spear. Boss: Plague. It Dooms two characters, so burst it down within 10 turns.',
+        subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'holy-lance' }],
+      },
+      {
+        id: 'ch35-s03',
+        text: 'B7, third room: Boss: Lunasaurs x2. Ragnarok and the Holy Lance make this easy. You get two Ribbons.',
+      },
+      {
+        id: 'ch35-s04',
+        text: 'B8: every encounter plays boss music, and Behemoth is a regular enemy here. Grab the Fuma Shuriken in the far west, then interact with the katana. Boss: Ogopogo. Don\'t use lightning (it counters with Whirl).',
+        subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'masamune' }],
+      },
+      {
+        id: 'ch35-s05',
+        text: 'B9 and B10: the last 4 chests in the game. Legendary Treasure Hunter pops after your next battle or area change.',
+        achievementIds: ['legendary-treasure-hunter'],
+      },
+      {
+        id: 'ch35-s06',
+        text: "B11: Zemus's Mind (resists physical) and Zemus's Breath (resists magic) appear here.",
+      },
+      {
+        id: 'ch35-s07',
+        text: 'B12: after the scripted fights, use the Crystal on Zeromus to reveal his true form. Attack, Jump, Curaja, Bahamut, and have Edge throw his Fuma Shurikens.',
+        achievementIds: ['to-the-blue-planet'],
+      },
+      {
+        id: 'ch35-s08',
+        text: 'If you got every bestiary entry along the way, Field Research - Professional unlocks once Zeromus is registered.',
+        achievementIds: ['field-research-professional'],
+      },
+    ],
+  },
+  {
+    id: 'ch36-cleanup',
+    title: 'Cleanup: Rare Drops and Leveling',
+    summary: 'Load your clear save for the secret summons, the Pink Tail, and level 70.',
+    steps: [
+      {
+        id: 'ch36-s01',
+        text: 'Goblin summon: farm Goblins on the overworld west of Mt. Hobs. Easy to automate with auto-battle.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'goblin' }],
+      },
+      {
+        id: 'ch36-s02',
+        text: 'Cockatrice summon: farm Cockatrices on the Mt. Hobs Trail, or use Sirens outside Mysidia to force Cockatrice groups.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'cockatrice' }],
+      },
+      {
+        id: 'ch36-s03',
+        text: 'Mindflayer summon: use Sirens on Magnetic Cavern B1 or B2 for pairs of Mind Flayers. Reload and retry if a batch of Sirens comes up dry.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'mindflayer' }],
+      },
+      {
+        id: 'ch36-s04',
+        text: 'Bomb summon: farm Balloons and Dark Grenades in the Western Lunar Path. Rest in the Lunar Whale between runs.',
+        subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'bomb' }],
+      },
+      {
+        id: 'ch36-s05',
+        text: 'Use all four summon items from the menu to teach them to Rydia. Summon Collector unlocks then, not when the items drop.',
+        achievementIds: ['summon-collector'],
+      },
+      {
+        id: 'ch36-s06',
+        text: 'Pink Tail: use Sirens in the eastern B5 room of the Lunar Subterrane to fight five Flan Princesses. Their Dancing berserks your party, so be patient.',
+      },
+      {
+        id: 'ch36-s07',
+        text: 'Take the Hovercraft from Mythril to the Adamant Grotto and trade the Pink Tail for the Adamant Armor.',
+        achievementIds: ['tail-of-myth'],
+      },
+      {
+        id: 'ch36-s08',
+        text: 'Get the final party (Cecil, Kain, Rosa, Rydia, Edge) to level 70. The drop grinds and Trap Doors in the Sealed Cavern usually get you most of the way.',
+        achievementIds: ['seasoned-hero'],
+      },
+      {
+        id: 'ch36-s09',
+        text: 'Kill-count and gil achievements (Apprentice/Experienced/Legendary Warrior at 100/500/1000 kills; Thrifty Spender, Smart Saver, and Moneybags at 10k/100k/500k gil) come naturally along the way.',
+        achievementIds: [
+          'apprentice-warrior',
+          'experienced-warrior',
+          'legendary-warrior',
+          'thrifty-spender',
+          'smart-saver',
+          'moneybags',
+        ],
+      },
+      {
+        id: 'ch36-s10',
+        text: 'Master of IV unlocks with the last achievement.',
+        achievementIds: ['master-of-iv'],
+      },
+    ],
+  },
+]
