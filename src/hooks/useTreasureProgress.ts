@@ -1,36 +1,54 @@
 import { useCallback, useMemo } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { treasures } from '../data/treasures'
-import type { TreasureKind } from '../types'
+import type { TreasureEntry, TreasureKind } from '../types'
 
 const STORAGE_KEY = 'ffiv-pr-treasure-progress'
 
 const totals: Record<TreasureKind, number> = { chest: 0, hidden: 0 }
 for (const entry of treasures) totals[entry.kind] += entry.contents.length
 
+/** Each chest/hidden item inside a group is tracked on its own, keyed by group id and position. */
+function itemKey(entryId: string, index: number) {
+  return `${entryId}:${index}`
+}
+
 export function useTreasureProgress() {
-  const [collectedIds, setCollectedIds] = useLocalStorage<string[]>(STORAGE_KEY, [])
+  const [collectedKeys, setCollectedKeys] = useLocalStorage<string[]>(STORAGE_KEY, [])
 
-  const collectedSet = useMemo(() => new Set(collectedIds), [collectedIds])
+  const collectedSet = useMemo(() => new Set(collectedKeys), [collectedKeys])
 
-  const isCollected = useCallback((id: string) => collectedSet.has(id), [collectedSet])
-
-  const toggle = useCallback(
-    (id: string) => {
-      setCollectedIds((prev) =>
-        prev.includes(id) ? prev.filter((existing) => existing !== id) : [...prev, id],
-      )
-    },
-    [setCollectedIds],
+  const isCollected = useCallback(
+    (entryId: string, index: number) => collectedSet.has(itemKey(entryId, index)),
+    [collectedSet],
   )
 
-  const reset = useCallback(() => setCollectedIds([]), [setCollectedIds])
+  const toggle = useCallback(
+    (entryId: string, index: number) => {
+      const key = itemKey(entryId, index)
+      setCollectedKeys((prev) =>
+        prev.includes(key) ? prev.filter((existing) => existing !== key) : [...prev, key],
+      )
+    },
+    [setCollectedKeys],
+  )
 
-  // each entry can hold several chests/items, so counts are weighted by contents length
+  const reset = useCallback(() => setCollectedKeys([]), [setCollectedKeys])
+
+  const groupProgress = useCallback(
+    (entry: TreasureEntry) => {
+      const done = entry.contents.filter((_, i) => collectedSet.has(itemKey(entry.id, i))).length
+      return { done, total: entry.contents.length }
+    },
+    [collectedSet],
+  )
+
   const collected = useMemo(() => {
     const counts: Record<TreasureKind, number> = { chest: 0, hidden: 0 }
     for (const entry of treasures) {
-      if (collectedSet.has(entry.id)) counts[entry.kind] += entry.contents.length
+      entry.contents.forEach((_, i) => {
+        if (collectedSet.has(itemKey(entry.id, i))) counts[entry.kind] += 1
+      })
     }
     return counts
   }, [collectedSet])
@@ -40,5 +58,5 @@ export function useTreasureProgress() {
     [collected],
   )
 
-  return { collectedSet, isCollected, toggle, reset, totals, collected, percentFor }
+  return { isCollected, toggle, reset, groupProgress, totals, collected, percentFor }
 }

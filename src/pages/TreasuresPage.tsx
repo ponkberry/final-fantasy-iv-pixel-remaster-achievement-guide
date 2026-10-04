@@ -5,6 +5,7 @@ import { useTreasureProgress } from '../hooks/useTreasureProgress'
 import { ProgressBar } from '../components/ProgressBar'
 import { ConfirmResetDialog } from '../components/ConfirmResetDialog'
 import { TreasureTags } from '../components/TreasureTags'
+import { TreasureItemList } from '../components/TreasureItemList'
 
 const milestones = achievements
   .filter((a) => a.treasureThreshold !== undefined)
@@ -29,7 +30,8 @@ const pillClass = (active: boolean) =>
   }`
 
 export function TreasuresPage() {
-  const { isCollected, toggle, reset, totals, collected, percentFor } = useTreasureProgress()
+  const { isCollected, toggle, reset, groupProgress, totals, collected, percentFor } =
+    useTreasureProgress()
   const [query, setQuery] = useState('')
   const [kindFilter, setKindFilter] = useState<KindFilter>('All')
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('All')
@@ -47,11 +49,16 @@ export function TreasuresPage() {
           entry.contents.some((item) => item.toLowerCase().includes(q)),
       )
     }
-    if (statusFilter === 'Collected') list = list.filter((entry) => isCollected(entry.id))
-    if (statusFilter === 'Uncollected') list = list.filter((entry) => !isCollected(entry.id))
+    // a spot counts as collected only once every chest/item in it is checked off
+    const isGroupDone = (entry: (typeof treasures)[number]) => {
+      const { done, total } = groupProgress(entry)
+      return done === total
+    }
+    if (statusFilter === 'Collected') list = list.filter(isGroupDone)
+    if (statusFilter === 'Uncollected') list = list.filter((entry) => !isGroupDone(entry))
     if (statusFilter === 'Missable') list = list.filter((entry) => entry.missable)
     return list
-  }, [query, kindFilter, statusFilter, isCollected])
+  }, [query, kindFilter, statusFilter, groupProgress])
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
@@ -77,9 +84,9 @@ export function TreasuresPage() {
       />
 
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Every treasure chest and hidden item in the game, in walkthrough order. Rows are grouped by
-        spot, so one checkbox can cover several chests. You can check your in-game chest count per
-        area on the map screen.
+        Every treasure chest and hidden item in the game, in walkthrough order, grouped by spot. Each
+        chest and hidden item has its own checkbox. You can check your in-game chest count per area
+        on the map screen.
       </p>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -161,39 +168,29 @@ export function TreasuresPage() {
         <table className="w-full text-left text-sm">
           <thead className="bg-slate-50 text-slate-600 dark:bg-slate-900 dark:text-slate-400">
             <tr>
-              <th className="w-10 px-3 py-2"></th>
               <th className="px-3 py-2">Location</th>
               <th className="px-3 py-2">Contents</th>
             </tr>
           </thead>
           <tbody>
             {visible.map((entry) => {
-              const done = isCollected(entry.id)
+              const { done, total } = groupProgress(entry)
               return (
                 <tr
                   key={entry.id}
                   className={`border-t border-slate-100 dark:border-slate-800 ${
-                    done ? 'bg-violet-50/60 dark:bg-violet-950/20' : ''
+                    done === total ? 'bg-violet-50/60 dark:bg-violet-950/20' : ''
                   }`}
                 >
-                  <td className="px-3 py-2 align-top">
-                    <input
-                      type="checkbox"
-                      checked={done}
-                      onChange={() => toggle(entry.id)}
-                      className="size-4 accent-violet-600"
-                      aria-label={`Mark ${entry.location} treasure as collected`}
-                    />
-                  </td>
                   <td className="px-3 py-2 align-top">
                     <div className="font-medium text-slate-900 dark:text-white">{entry.location}</div>
                     {entry.hint && (
                       <div className="text-xs text-slate-500 dark:text-slate-500">{entry.hint}</div>
                     )}
-                  </td>
-                  <td className="px-3 py-2 align-top text-slate-600 dark:text-slate-400">
-                    {entry.contents.join(', ')}
                     <TreasureTags entry={entry} />
+                  </td>
+                  <td className="px-3 py-2 align-top">
+                    <TreasureItemList entry={entry} isCollected={isCollected} onToggle={toggle} />
                   </td>
                 </tr>
               )
