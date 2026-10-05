@@ -14,9 +14,13 @@ export function NavBar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
-      <nav className="mx-auto flex max-w-4xl items-center gap-6 px-4 py-4">
-        <span className="font-semibold text-slate-900 dark:text-white">FFIV Pixel Remaster Guide</span>
-        <div className="flex gap-4 text-sm">
+      <nav className="mx-auto flex max-w-4xl items-center gap-4 px-4 py-4 sm:gap-6">
+        <span className="shrink-0 font-semibold text-slate-900 dark:text-white">
+          <span className="sm:hidden">FFIV PR</span>
+          <span className="hidden sm:inline">FFIV Pixel Remaster Guide</span>
+        </span>
+        {/* links scroll sideways on narrow screens instead of widening the whole page */}
+        <div className="flex min-w-0 gap-4 overflow-x-auto whitespace-nowrap text-sm [scrollbar-width:none]">
           {links.map(({ to, label, end }) => (
             <NavLink
               key={to}

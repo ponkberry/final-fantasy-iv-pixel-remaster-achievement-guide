@@ -1,5 +1,7 @@
 import type { TreasureEntry } from '../types'
 import { TreasureTags } from './TreasureTags'
+import { ImageHint } from './ImageHint'
+import { treasureImages } from '../data/guideImages'
 
 interface StepTreasureListProps {
   entries: TreasureEntry[]
@@ -18,6 +20,7 @@ export function StepTreasureList({ entries, isCollected, onToggle }: StepTreasur
           <p className="text-xs text-slate-500 dark:text-slate-500">
             <span className="font-medium text-slate-600 dark:text-slate-400">{entry.location}</span>
             {entry.hint ? ` - ${entry.hint}` : ''}
+            <ImageHint images={treasureImages[entry.id] ?? []} label={entry.location} />
           </p>
           <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
             {entry.contents.map((item, i) => {

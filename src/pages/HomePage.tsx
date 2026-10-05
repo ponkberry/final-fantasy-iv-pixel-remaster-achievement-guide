@@ -65,6 +65,19 @@ export function HomePage() {
             (secret summons and the Pink Tail) far less painful. You can also buy them at the
             Hummingway Home on the moon.
           </li>
+          <li>
+            Hover (or tap) the camera icon next to a step or treasure to see where it is.
+            Screenshots and route are from the{' '}
+            <a
+              href="https://steamcommunity.com/sharedfiles/filedetails/?id=2596700264"
+              target="_blank"
+              rel="noreferrer"
+              className="text-violet-600 hover:underline dark:text-violet-400"
+            >
+              Walkthrough &amp; Achievement Guide
+            </a>{' '}
+            by lylat and collaborators on Steam.
+          </li>
           <li>Everything is saved locally in this browser and stays there until you hit Reset.</li>
         </ul>
       </div>

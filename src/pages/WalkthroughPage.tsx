@@ -10,6 +10,8 @@ import { useTreasureProgress } from '../hooks/useTreasureProgress'
 import { WalkthroughNav } from '../components/WalkthroughNav'
 import { StepBestiaryList } from '../components/StepBestiaryList'
 import { StepTreasureList } from '../components/StepTreasureList'
+import { ImageHint } from '../components/ImageHint'
+import { stepImages } from '../data/guideImages'
 import { ConfirmResetDialog } from '../components/ConfirmResetDialog'
 
 export function WalkthroughPage() {
@@ -124,23 +126,26 @@ export function WalkthroughPage() {
                   const done = isStepComplete(step.id)
                   return (
                     <li key={step.id} className="border-l-2 border-slate-200 pl-4 dark:border-slate-800">
-                      <label className="flex cursor-pointer items-start gap-2">
-                        <input
-                          type="checkbox"
-                          checked={done}
-                          onChange={() => toggleStep(step.id)}
-                          className="mt-1 size-4 shrink-0 accent-violet-600"
-                        />
-                        <span
-                          className={
-                            done
-                              ? 'text-slate-500 line-through dark:text-slate-500'
-                              : 'text-slate-800 dark:text-slate-200'
-                          }
-                        >
-                          {step.text}
-                        </span>
-                      </label>
+                      <div className="flex items-start gap-1">
+                        <label className="flex flex-1 cursor-pointer items-start gap-2">
+                          <input
+                            type="checkbox"
+                            checked={done}
+                            onChange={() => toggleStep(step.id)}
+                            className="mt-1 size-4 shrink-0 accent-violet-600"
+                          />
+                          <span
+                            className={
+                              done
+                                ? 'text-slate-500 line-through dark:text-slate-500'
+                                : 'text-slate-800 dark:text-slate-200'
+                            }
+                          >
+                            {step.text}
+                          </span>
+                        </label>
+                        <ImageHint images={stepImages[step.id] ?? []} label={chapter.title} />
+                      </div>
                       <StepTreasureList
                         entries={(step.treasureIds ?? [])
                           .map((id) => treasureById.get(id))

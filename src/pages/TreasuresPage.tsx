@@ -6,6 +6,8 @@ import { ProgressBar } from '../components/ProgressBar'
 import { ConfirmResetDialog } from '../components/ConfirmResetDialog'
 import { TreasureTags } from '../components/TreasureTags'
 import { TreasureItemList } from '../components/TreasureItemList'
+import { ImageHint } from '../components/ImageHint'
+import { treasureImages } from '../data/guideImages'
 
 const milestones = achievements
   .filter((a) => a.treasureThreshold !== undefined)
@@ -183,7 +185,10 @@ export function TreasuresPage() {
                   }`}
                 >
                   <td className="px-3 py-2 align-top">
-                    <div className="font-medium text-slate-900 dark:text-white">{entry.location}</div>
+                    <div className="font-medium text-slate-900 dark:text-white">
+                      {entry.location}
+                      <ImageHint images={treasureImages[entry.id] ?? []} label={entry.location} />
+                    </div>
                     {entry.hint && (
                       <div className="text-xs text-slate-500 dark:text-slate-500">{entry.hint}</div>
                     )}

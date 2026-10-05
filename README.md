@@ -21,7 +21,9 @@ Sister project of the [3D Remake guide](https://github.com/ponkberry/final-fanta
 - Achievements and icons: [Steam global achievements](https://steamcommunity.com/stats/1173800/achievements/)
 - Walkthrough, bestiary numbers, and treasure counts:
   ["FINAL FANTASY IV | Walkthrough & Achievement Guide"](https://steamcommunity.com/sharedfiles/filedetails/?id=2596700264)
-  by lylat and collaborators. Step text is paraphrased.
+  by lylat and collaborators. Step text is paraphrased. The location screenshots in `public/guide/`
+  come from the same guide and are used with its authors' permission (downscaled to 640px wide);
+  `src/data/guideImages.ts` maps each one to a treasure or walkthrough step.
 
 ## Development
 
