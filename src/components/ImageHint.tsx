@@ -142,7 +142,14 @@ export function ImageHint({ images, label }: ImageHintProps) {
               ))}
             </div>
             <p className="mt-1.5 text-[11px] text-slate-500 dark:text-slate-500">
-              Screenshots from the lylat guide on Steam
+              <a
+                href="https://steamcommunity.com/sharedfiles/filedetails/?id=2596700264"
+                target="_blank"
+                rel="noreferrer"
+                className="text-violet-600 hover:underline dark:text-violet-400"
+              >
+                lylat's Steam Guide
+              </a>
             </p>
           </div>,
           document.body,
