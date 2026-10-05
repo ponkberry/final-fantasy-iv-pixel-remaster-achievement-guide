@@ -49,8 +49,6 @@ export interface BestiaryEntry {
   missable?: boolean
   /** id of the walkthrough chapter where this monster is first encountered */
   chapterId?: string
-  /** additional chapters where this monster also reappears and is worth noting */
-  extraChapterIds?: string[]
 }
 
 export interface TreasureEntry {
@@ -79,6 +77,8 @@ export interface WalkthroughStep {
   subAchievementIds?: { achievementId: string; subItemId: string }[]
   /** treasure ids (see treasures.ts) collected during this step, shown as per-item checkboxes */
   treasureIds?: string[]
+  /** bestiary numbers (see bestiary.ts) first encountered during this step, shown as checkboxes */
+  bestiaryNumbers?: number[]
   /** urgent callout shown in red, e.g. marking a location as a one-time-only visit */
   warning?: string
 }

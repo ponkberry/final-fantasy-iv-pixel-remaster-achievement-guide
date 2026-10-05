@@ -3,7 +3,7 @@ import type { WalkthroughChapter } from '../types'
 // Sourced from "FINAL FANTASY IV | Walkthrough & Achievement Guide" by lylat and collaborators
 // (https://steamcommunity.com/sharedfiles/filedetails/?id=2596700264), written for the Pixel
 // Remaster. Step text is paraphrased, not copied. Treasure and bestiary checklists for each chapter
-// come from treasures.ts and bestiary.ts via their chapterId.
+// come from treasures.ts and bestiary.ts, referenced per step.
 export const walkthrough: WalkthroughChapter[] = [
   {
     id: 'ch01-prologue',
@@ -13,6 +13,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch01-s01',
         text: 'Watch the opening and win the two scripted airship battles. Floating Eyeball and Zu are added to the bestiary automatically.',
+        bestiaryNumbers: [3, 37],
       },
       {
         id: 'ch01-s02',
@@ -52,15 +53,18 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch02-s04',
         text: 'Head northwest from Baron, over the bridge, to the Mist Cave. Goblins, Helldivers, and Sword Rats roam the overworld here.',
+        bestiaryNumbers: [1, 2, 4],
       },
       {
         id: 'ch02-s05',
         text: 'Grab all 4 chests in the Mist Cave, then heal and save before the last set of stairs.',
         treasureIds: ['c007', 'c008', 'c009', 'c010'],
+        bestiaryNumbers: [5, 7],
       },
       {
         id: 'ch02-s06',
         text: 'Boss: Mist Dragon. Jump with Kain and attack with Cecil, but do nothing while it is in mist form to avoid its counter.',
+        bestiaryNumbers: [191],
       },
     ],
   },
@@ -77,10 +81,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch03-s02',
         text: 'Head northeast across the desert to Kaipo, the town at the oasis. Sand Worm is a rare desert encounter.',
+        bestiaryNumbers: [6, 8, 9],
       },
       {
         id: 'ch03-s03',
         text: 'Baron soldiers attack at the Inn. Kill the General first so he can\'t run away. If he escapes he may not count for the bestiary. Rydia joins afterward.',
+        bestiaryNumbers: [20, 21],
         warning: 'Defeat the General before the Baron Soldiers so the General entry registers properly.',
       },
       {
@@ -103,6 +109,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch04-s01',
         text: 'South Entrance: grab the two chests straight north, then head west. Talk to the old man on the way and Tellah joins.',
         treasureIds: ['c012', 'c013'],
+        bestiaryNumbers: [11, 12, 13, 16, 18],
       },
       {
         id: 'ch04-s02',
@@ -113,6 +120,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch04-s03',
         text: 'B2: take the west stairs from the water for a Potion, then go south and up the stairs for an Ether. Watch the magic tutorial in the southwest room, then grab the Ice Rod on the upper area to the east. B3: two chests on a side branch where the bridges split. Back on B2, follow the left path to a dead end with a secret passage (Feathered Cap), and pick up the Potion on the path north.',
         treasureIds: ['c018', 'c019', 'c020', 'c022', 'c023', 'c024'],
+        bestiaryNumbers: [10, 15, 17],
       },
       {
         id: 'ch04-s04',
@@ -122,6 +130,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch04-s05',
         text: 'Toadgre and Alligator appear near the North Entrance. If you miss Alligator here, it is common in the next dungeon.',
+        bestiaryNumbers: [14, 19],
       },
     ],
   },
@@ -143,6 +152,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch05-s03',
         text: 'Boss: Octomammoth. Summon Chocobo with Rydia, cast Thunder with Tellah, and attack with Cecil.',
+        bestiaryNumbers: [158],
       },
     ],
   },
@@ -171,10 +181,12 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch06-s04',
         text: 'Hovercraft northeast and over the shallows to the Antlion Cave. It has 13 chests across B1 and B2, including a Lamia\'s Harp behind the B2 door and a save room on the way back up.',
         treasureIds: ['c044', 'c046', 'c047', 'c048', 'c049', 'c050', 'c052', 'c055'],
+        bestiaryNumbers: [22, 23, 24, 25, 26],
       },
       {
         id: 'ch06-s05',
         text: "Boss: Antlion. It counters everything, but only for chip damage. Summon Chocobo and attack. You get the Sand Ruby.",
+        bestiaryNumbers: [159],
       },
     ],
   },
@@ -191,6 +203,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch07-s02',
         text: 'Head east of the Antlion Cave to Mt. Hobs. Rydia learns Fire at the entrance. The Trail on the west side has 4 chests and a save point.',
         treasureIds: ['c059'],
+        bestiaryNumbers: [27, 29, 30, 31, 32],
       },
       {
         id: 'ch07-s03',
@@ -200,10 +213,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch07-s04',
         text: 'Boss: Mom Bomb. Summon Chocobo and attack. After it explodes, clear the Bombs and Gray Bombs with multi-target attacks. Yang joins.',
+        bestiaryNumbers: [160],
       },
       {
         id: 'ch07-s05',
         text: 'Cockatrice here can drop the Cockatrice summon, but don\'t grind for it now. It is far easier with Sirens later. Leave via the East Entrance and pick up Gatlinger on the way to Fabul.',
+        bestiaryNumbers: [28, 33, 34],
         subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'cockatrice' }],
       },
     ],
@@ -216,6 +231,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch08-s01',
         text: 'Restock, then head up to the Throne Room to start the defense of Fabul. It is a series of back-to-back fights.',
+        bestiaryNumbers: [35, 36],
         warning: 'Kill each Captain before his Baron Warriors so he can\'t escape. The Captain entry may be missable.',
       },
       {
@@ -271,19 +287,23 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch10-s01',
         text: 'Palom clears the fire. Grab the two Potions on the Entrance, then meet Tellah on the Ridge. He rejoins.',
         treasureIds: ['c068', 'c069'],
+        bestiaryNumbers: [38, 39, 40],
       },
       {
         id: 'ch10-s02',
         text: 'Grab both Ethers on the Pass (4 chests total in the dungeon). Lilith is easier to find on the way back down.',
         treasureIds: ['c070', 'c071'],
+        bestiaryNumbers: [41],
       },
       {
         id: 'ch10-s03',
         text: 'Boss: Scarmiglione and Skullnants. They are undead, so use Fira and Cura and throw Hi-Potions.',
+        bestiaryNumbers: [42, 177],
       },
       {
         id: 'ch10-s04',
         text: 'Heal, save, and cross the bridge. Boss: Scarmiglione (undead form). Hi-Potions deal about 500 each; spam Cura and Fira.',
+        bestiaryNumbers: [178],
       },
       {
         id: 'ch10-s05',
@@ -304,6 +324,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch11-s01',
         text: 'Go upstairs in the Inn and talk to Yang. Beat the Baron Guards (save MP), then the Monk with strong spells. Yang rejoins and you get the Baron Key.',
+        bestiaryNumbers: [45],
       },
       {
         id: 'ch11-s02',
@@ -319,6 +340,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch11-s04',
         text: 'Take the stairs down into the Old Waterway. B4 has 3 chests to the south. On B3, secret passages south from the water lead to the next chests; the third one starts at the foot of the stairs (push right). B2 has a passage left of the door at the top of the long stairs.',
         treasureIds: ['c077', 'c078', 'c079', 'c080', 'c081'],
+        bestiaryNumbers: [43, 44, 46, 47, 48, 49],
       },
       {
         id: 'ch11-s05',
@@ -339,6 +361,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch12-s02',
         text: 'Boss: Baigan with Right and Left Arm. He reflects magic, but Quake goes through. Palom wins this in a few turns.',
+        bestiaryNumbers: [161, 162, 163],
       },
       {
         id: 'ch12-s03',
@@ -353,6 +376,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch12-s05',
         text: 'Heal, save, and talk to the King in the Throne Room. Boss: Cagnazzo. Use Thundaga with Tellah and Thundara with Palom.',
+        bestiaryNumbers: [179],
         achievementIds: ['overcoming-grief'],
       },
       {
@@ -397,6 +421,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch14-s01',
         text: 'Land by the ruined castle on the southwest island. Fight Roc Baby, Roc, Mors, Ironback, Black Lizard, and Fiery Hound outside.',
+        bestiaryNumbers: [71, 73, 74, 85, 94, 100],
       },
       {
         id: 'ch14-s02',
@@ -407,16 +432,19 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch14-s03',
         text: 'From the right of the third pot, walk east to a secret passage. That chest is a Coeurl x2 + Lamia fight for the Blood Lance. Don\'t attack the Coeurls physically.',
         treasureIds: ['c106'],
+        bestiaryNumbers: [91, 98],
       },
       {
         id: 'ch14-s04',
         text: 'Drop through the hole for the Silver Hourglass, then take the underground passage south for 2 Ethers and a Mad Ogre x3 chest (Silver Apple).',
         treasureIds: ['c107', 'c109', 'c110'],
+        bestiaryNumbers: [102],
       },
       {
         id: 'ch14-s05',
         text: 'West Tower 1F: two tiles south of the entrance, push east for a Skuldier x4 + Steel Golem chest (Sleep Blade). On 2F, check the pot, then push south between the pots for 2 chests. The Bomb Core is back down on 1F.',
         treasureIds: ['c111', 'h29', 'c113', 'c114'],
+        bestiaryNumbers: [75, 107],
       },
       {
         id: 'ch14-s06',
@@ -434,6 +462,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch15-s01',
         text: 'Land on the grass south of the waterfall town on the northwest continent. Walk north to a hidden Chocobo Forest by a bridge for Gysahl Greens.',
         treasureIds: ['h30'],
+        bestiaryNumbers: [50, 51, 52, 53, 54],
       },
       {
         id: 'ch15-s02',
@@ -485,15 +514,18 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch17-s02',
         text: 'Collect all 10 chests across B1-B4. There are save points on B3 and B4.',
         treasureIds: ['c129', 'c130', 'c131', 'c133', 'c136', 'c137', 'c138'],
+        bestiaryNumbers: [55, 56, 58, 59],
       },
       {
         id: 'ch17-s03',
         text: 'Mind Flayer here drops the Mindflayer summon. Save this grind for later with Sirens.',
+        bestiaryNumbers: [57],
         subAchievementIds: [{ achievementId: 'summon-collector', subItemId: 'mindflayer' }],
       },
       {
         id: 'ch17-s04',
         text: 'Boss: Dark Elf. The first round is unwinnable. Edward plays the harp, so re-equip your real gear and fight it again. It turns into the Dark Dragon near the end.',
+        bestiaryNumbers: [164, 165],
       },
       {
         id: 'ch17-s05',
@@ -511,6 +543,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch18-s01',
         text: 'Bestiary here: Purple Bavarois, Puppet, Sorceress, Black Knight, Centaur Knight, Gremlin (more common on 2F), Soldieress, Puppeteer, Ice Lizard, Cold Beast, and Hell Turtle (1F only).',
+        bestiaryNumbers: [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
         warning: 'Every monster here is missable.',
       },
       {
@@ -526,10 +559,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch18-s04',
         text: 'Save in the bottom room on 5F. Boss: Magus Sisters. Kill Cindy first, since she revives the others.',
+        bestiaryNumbers: [166, 167, 168],
       },
       {
         id: 'ch18-s05',
         text: 'After the scenes on 6F, wake Kain. Rosa and Kain join. Boss: Barbariccia. Keep Kain jumping and cure petrification with Esuna.',
+        bestiaryNumbers: [180],
         achievementIds: ['reforged-love'],
       },
     ],
@@ -563,10 +598,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch20-s01',
         text: 'Heal, save, and head north to the Throne Room. Cid leaves. Kill all the Brinas and one Calco for the bestiary, and let the rest merge into Calcobrena for extra EXP.',
+        bestiaryNumbers: [169, 170, 171],
       },
       {
         id: 'ch20-s02',
         text: 'Boss: Golbez. Pass turns until the scene plays. Rydia returns, and Bio plus attacks finish him quickly.',
+        bestiaryNumbers: [172],
       },
       {
         id: 'ch20-s03',
@@ -587,6 +624,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch20-s06',
         text: 'Leave through the Dwarven Base and follow the path northwest to the Tower of Babel. Goblin Captain, Armadillo, and Magma Tortoise are on the way.',
+        bestiaryNumbers: [76, 77, 78],
       },
     ],
   },
@@ -600,6 +638,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch21-s01',
         text: '1F has 3 chests. On 2F, grab the Green Beret, then open the Security Eye chest (Icebrand) in the south room and the Stone Golem chest (Ice Lance) in the northeast room.',
         treasureIds: ['c175', 'c176', 'c177', 'c178', 'c179', 'c180'],
+        bestiaryNumbers: [84, 86, 88, 89, 90, 93, 101, 104],
       },
       {
         id: 'ch21-s02',
@@ -609,6 +648,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch21-s03',
         text: "Naga only appears when a Security Eye summons it. Don't kill the Eye before it calls one in.",
+        bestiaryNumbers: [87],
         warning: 'Naga is easy to miss - let a Security Eye summon it first.',
       },
       {
@@ -619,6 +659,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch21-s05',
         text: 'Boss: Doctor and Barnabas, then Dr. Lugae. Barnabas-Z only appears if Barnabas dies before the Doctor; the lylat guide reports it isn\'t needed for 100%. Close the battle normally so the entries save.',
+        bestiaryNumbers: [173, 174, 175, 176],
       },
       {
         id: 'ch21-s06',
@@ -639,6 +680,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch22-s02',
         text: 'Hovercraft west over the shallows to the Cave of Eblan. B1 has 3 chests behind fake walls and past the stream. Bloody Bat is new here.',
         treasureIds: ['c193'],
+        bestiaryNumbers: [106],
       },
       {
         id: 'ch22-s03',
@@ -667,6 +709,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch23-s01',
         text: 'B1: Unicorn Horn by the entrance and a Silver Hourglass northeast of the door. B2: a Mad Ogre x4 chest (Ogrekiller).',
         treasureIds: ['c211', 'c212', 'c213'],
+        bestiaryNumbers: [92, 95, 96, 99],
       },
       {
         id: 'ch23-s02',
@@ -676,10 +719,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch23-s03',
         text: 'Green Dragon is extremely rare, and Lamia Matriarch and Mythril Golem stick to the lower floors. Take your time here.',
+        bestiaryNumbers: [97, 103, 105],
       },
       {
         id: 'ch23-s04',
         text: 'The fight against the King and Queen of Eblan is unwinnable. Boss: Rubicante. Spam Shiva while his cape is open; never use fire, and avoid physical attacks (he counters).',
+        bestiaryNumbers: [181],
         achievementIds: ['inflamed-anger'],
       },
       {
@@ -717,6 +762,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch25-s01',
         text: 'Fly northwest over the lava to the small island cave. Cast Float on everyone on every floor, since it wears off between floors.',
+        bestiaryNumbers: [80, 113, 114, 115, 116, 117, 118, 119],
       },
       {
         id: 'ch25-s02',
@@ -752,11 +798,13 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch26-s04',
         text: 'Boss: Asura. Cast Reflect on her so her buffs bounce to your party, and keep Curaja going.',
+        bestiaryNumbers: [192],
         subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'asura' }],
       },
       {
         id: 'ch26-s05',
         text: 'Boss: Leviathan. He opens with Tidal Wave. Curaja every turn and use Thunder attacks (Blitz with Edge).',
+        bestiaryNumbers: [193],
         subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'leviathan' }],
       },
       {
@@ -773,6 +821,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch27-s01',
         text: 'Fly to the cave in the northwest corner of the Underworld. Cast Float on every floor. Leviathan one-shots most groups here.',
+        bestiaryNumbers: [79, 108, 109, 110, 111, 112],
       },
       {
         id: 'ch27-s02',
@@ -804,6 +853,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch28-s01',
         text: 'Outside the Sylvan Cave, fight Blood Flower, Chrysalis, and Hell Flapper. On the three-tile peninsula just south, look for Gloomwing, Gorgon, Crawler, Tarantula, and the rare Yellow Dragon.',
+        bestiaryNumbers: [72, 81, 82, 83, 124, 129, 134],
       },
       {
         id: 'ch28-s02',
@@ -813,10 +863,12 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch28-s03',
         text: 'Every door here is a Trap Door fight and great EXP for Seasoned Hero. The cave has 19 chests across B1-B3.',
         treasureIds: ['c277', 'c279', 'c281', 'c282', 'c283', 'c284', 'c287', 'c289', 'c290', 'c292', 'c293', 'c295'],
+        bestiaryNumbers: [120, 121, 122, 123, 125, 126],
       },
       {
         id: 'ch28-s04',
         text: 'Take the Dark Crystal on B5. Boss: Demon Wall. Spam Leviathan before it closes in.',
+        bestiaryNumbers: [182],
       },
       {
         id: 'ch28-s05',
@@ -873,6 +925,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch30-s03',
         text: 'Land northwest of the Crystal Palace. You can rest in the cabin below the bridge. In the Western Lunar Path, grab the Eukaryote/Prokaryote chest (Golden Apple) and two more chests near the north exit.',
         treasureIds: ['c296', 'c298'],
+        bestiaryNumbers: [127, 128, 130, 131, 132, 133],
       },
       {
         id: 'ch30-s04',
@@ -894,14 +947,17 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch31-s01',
         text: 'Land by the circular ledge on the east side of the moon. The 4 chests in the cave make up the Genji set: Gloves and Shield on B1, Armor and Helm on B2.',
         treasureIds: ['c300', 'c302'],
+        bestiaryNumbers: [142, 143, 144, 146, 149],
       },
       {
         id: 'ch31-s02',
         text: 'Each of three wizards turns into a Behemoth. It counters every hit, so use Leviathan, Flare, and attacks with heals every turn.',
+        bestiaryNumbers: [153],
       },
       {
         id: 'ch31-s03',
         text: 'Boss: Bahamut. Reflect everyone first. Megaflare at 0 bounces back for 9999.',
+        bestiaryNumbers: [195],
         subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'bahamut' }],
       },
       {
@@ -919,6 +975,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch32-s01',
         text: 'Bestiary here: Beamer, Centaurion, Mech Soldier, Searcher, Last Arm (from a chest), Giant Soldier, and Mech Dragon. Mech Dragon only spawns in the Stairwell right before the bosses.',
+        bestiaryNumbers: [135, 136, 137, 138, 140, 141],
         warning: 'Every monster here is missable.',
       },
       {
@@ -929,6 +986,7 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch32-s03',
         text: 'Chest of the Giant has 5 chests and the Stomach has 2. The Inner Path has the Last Arm chest (Elixir). There is a save point and shop past it.',
         treasureIds: ['c307', 'c309', 'c310'],
+        bestiaryNumbers: [139],
       },
       {
         id: 'ch32-s04',
@@ -938,6 +996,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch32-s05',
         text: 'Boss: CPU. Destroy the Defense Node, focus the CPU, and leave the Attack Node for last. Killing both nodes makes it revive them. FuSoYa leaves and Kain rejoins.',
+        bestiaryNumbers: [183, 184, 185],
       },
     ],
   },
@@ -953,6 +1012,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch33-s02',
         text: 'Boss: Odin. You have about one minute. Use Bahamut, Holy, Jump, and attacks.',
+        bestiaryNumbers: [194],
         subAchievementIds: [{ achievementId: 'summon-master', subItemId: 'odin' }],
       },
       {
@@ -986,6 +1046,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch34-s03',
         text: 'B3: interact with the katana. Boss: White Dragon. It counters with Slow, so keep Haste on everyone.',
+        bestiaryNumbers: [188],
         subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'murasame' }],
       },
       {
@@ -997,10 +1058,12 @@ export const walkthrough: WalkthroughChapter[] = [
         id: 'ch34-s05',
         text: 'B4-B5: several monster-in-a-box chests (Behemoths and dragons) give the Crystal set and a Stardust Rod. The eastern room on B5 with the Red Fang is the Flan Princess room.',
         treasureIds: ['c321', 'c322', 'c323', 'c324', 'c325', 'c326', 'c327', 'c328', 'c329'],
+        bestiaryNumbers: [145, 147, 148, 150, 151, 152],
       },
       {
         id: 'ch34-s06',
         text: 'Optional: use Sirens in the Flan Princess room. The 1/64 Pink Tail drop is needed for Tail of Myth, so most players leave this grind for after the game.',
+        bestiaryNumbers: [157],
       },
       {
         id: 'ch34-s07',
@@ -1010,6 +1073,7 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch34-s08',
         text: 'Boss: Dark Bahamut, at the sword on the pedestal. Heal after its opening Megaflare, Reflect the party, then spam Bahamut so its counter bounces back.',
+        bestiaryNumbers: [190],
         subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'ragnarok' }],
       },
     ],
@@ -1027,17 +1091,20 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch35-s02',
         text: 'B7, second room: interact with the spear. Boss: Plague. It Dooms two characters, so burst it down within 10 turns.',
+        bestiaryNumbers: [187],
         subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'holy-lance' }],
       },
       {
         id: 'ch35-s03',
         text: 'B7, third room: Boss: Lunasaurs x2. Ragnarok and the Holy Lance make this easy. You get two Ribbons.',
         treasureIds: ['c337'],
+        bestiaryNumbers: [186],
       },
       {
         id: 'ch35-s04',
         text: 'B8: every encounter plays boss music, and Behemoth is a regular enemy here. Grab the Fuma Shuriken in the far west, then interact with the katana. Boss: Ogopogo. Don\'t use lightning (it counters with Whirl).',
         treasureIds: ['c338'],
+        bestiaryNumbers: [154, 189],
         subAchievementIds: [{ achievementId: 'power-unleashed', subItemId: 'masamune' }],
       },
       {
@@ -1049,10 +1116,12 @@ export const walkthrough: WalkthroughChapter[] = [
       {
         id: 'ch35-s06',
         text: "B11: Zemus's Mind (resists physical) and Zemus's Breath (resists magic) appear here.",
+        bestiaryNumbers: [155, 156],
       },
       {
         id: 'ch35-s07',
         text: 'B12: after the scripted fights, use the Crystal on Zeromus to reveal his true form. Attack, Jump, Curaja, Bahamut, and have Edge throw his Fuma Shurikens.',
+        bestiaryNumbers: [196, 197],
         achievementIds: ['to-the-blue-planet'],
       },
       {

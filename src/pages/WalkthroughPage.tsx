@@ -8,7 +8,7 @@ import { useWalkthroughProgress } from '../hooks/useWalkthroughProgress'
 import { useBestiaryProgress } from '../hooks/useBestiaryProgress'
 import { useTreasureProgress } from '../hooks/useTreasureProgress'
 import { WalkthroughNav } from '../components/WalkthroughNav'
-import { ChapterBestiaryList } from '../components/ChapterBestiaryList'
+import { StepBestiaryList } from '../components/StepBestiaryList'
 import { StepTreasureList } from '../components/StepTreasureList'
 import { ConfirmResetDialog } from '../components/ConfirmResetDialog'
 
@@ -39,20 +39,7 @@ export function WalkthroughPage() {
 
   const achievementById = useMemo(() => new Map(achievements.map((a) => [a.id, a])), [])
 
-  const bestiaryByChapter = useMemo(() => {
-    const map = new Map<string, typeof bestiary>()
-    for (const entry of bestiary) {
-      const chapterIds = [entry.chapterId, ...(entry.extraChapterIds ?? [])].filter(
-        (id): id is string => Boolean(id),
-      )
-      for (const chapterId of chapterIds) {
-        const list = map.get(chapterId) ?? []
-        list.push(entry)
-        map.set(chapterId, list)
-      }
-    }
-    return map
-  }, [])
+  const bestiaryByNumber = useMemo(() => new Map(bestiary.map((b) => [b.number, b])), [])
 
   const treasureById = useMemo(() => new Map(treasures.map((t) => [t.id, t])), [])
 
@@ -161,6 +148,13 @@ export function WalkthroughPage() {
                         isCollected={isCollected}
                         onToggle={toggleTreasure}
                       />
+                      <StepBestiaryList
+                        entries={(step.bestiaryNumbers ?? [])
+                          .map((n) => bestiaryByNumber.get(n))
+                          .filter((b) => b !== undefined)}
+                        isSeen={isSeen}
+                        onToggle={toggleBestiary}
+                      />
                       {step.warning && (
                         <p className="mt-2 ml-6 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-sm font-medium text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400">
                           ⚠ {step.warning}
@@ -234,13 +228,6 @@ export function WalkthroughPage() {
               </ol>
               )}
 
-              {!collapsed && (
-                <ChapterBestiaryList
-                  entries={bestiaryByChapter.get(chapter.id) ?? []}
-                  isSeen={isSeen}
-                  onToggle={toggleBestiary}
-                />
-              )}
 
             </section>
             )
