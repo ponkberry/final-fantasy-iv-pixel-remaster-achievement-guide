@@ -542,7 +542,7 @@ export const walkthrough: WalkthroughChapter[] = [
     steps: [
       {
         id: 'ch18-s01',
-        text: 'Bestiary here: Purple Bavarois, Puppet, Sorceress, Black Knight, Centaur Knight, Gremlin (more common on 2F), Soldieress, Puppeteer, Ice Lizard, Cold Beast, and Hell Turtle (1F only).',
+        text: 'Bestiary here: Purple Bavarois, Puppet, Sorceress, Black Knight, Centaur Knight, Gremlin (more common on 2F), Soldieress, Puppeteer, Ice Lizard, Cold Beast, and Hell Turtle (1F and 2F only).',
         bestiaryNumbers: [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
         warning: 'Every monster here is missable.',
       },
@@ -612,7 +612,7 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch20-s04',
-        text: 'Veteran Treasure Hunter (50% of chests) should pop around the East Tower 3F chests.',
+        text: 'Grab the 4 chests on East Tower 3F. Veteran Treasure Hunter (50% of chests) pops once you head back down the tower afterward.',
         treasureIds: ['c171'],
         achievementIds: ['veteran-treasure-hunter'],
       },
@@ -658,7 +658,7 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch21-s05',
-        text: 'Boss: Doctor and Barnabas, then Dr. Lugae. Barnabas-Z only appears if Barnabas dies before the Doctor; the lylat guide reports it isn\'t needed for 100%. Close the battle normally so the entries save.',
+        text: 'Boss: Doctor and Barnabas, then Dr. Lugae. Barnabas-Z only appears if Barnabas dies before the Doctor.',
         bestiaryNumbers: [173, 174, 175, 176],
       },
       {
