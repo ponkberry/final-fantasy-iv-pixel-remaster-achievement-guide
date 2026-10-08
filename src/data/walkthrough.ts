@@ -703,7 +703,7 @@ export const walkthrough: WalkthroughChapter[] = [
     id: 'ch23-babel-second-trip',
     title: 'Tower of Babel: Second Trip',
     summary: 'Edge leads the way into the tower from the surface.',
-    warning: 'One-visit dungeon. Get all 8 chests and every bestiary entry here (Sorcerer, Ghost Knight, Lamia Matriarch, Grudger, Green Dragon, Mythril Golem, Balloon).',
+    warning: 'One-visit dungeon. Get all 8 chests and every missable bestiary entry here (Sorcerer, Ghost Knight, Lamia Matriarch, Grudger, Mythril Golem).',
     steps: [
       {
         id: 'ch23-s01',
@@ -717,11 +717,6 @@ export const walkthrough: WalkthroughChapter[] = [
         treasureIds: ['c214', 'c215', 'c216'],
       },
       {
-        id: 'ch23-s03',
-        text: 'Green Dragon is extremely rare, and Lamia Matriarch and Mythril Golem stick to the lower floors. Take your time here.',
-        bestiaryNumbers: [97, 103, 105],
-      },
-      {
         id: 'ch23-s04',
         text: 'The fight against the King and Queen of Eblan is unwinnable. Boss: Rubicante. Spam Shiva while his cape is open; never use fire, and avoid physical attacks (he counters).',
         bestiaryNumbers: [181],
@@ -729,8 +724,9 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch23-s05',
-        text: 'You fall into a trap on the way to the crystal. Grab the Hi-Potions on Underworld 8F and 6F before you leave.',
+        text: 'You fall into a trap on the way to the crystal. Grab the Hi-Potions on Underworld 8F and 6F before you leave. Lamia Matriarch and Mythril Golem appear on these lower floors, and the extremely rare Green Dragon usually shows up on 7F, so take your time here.',
         treasureIds: ['c217', 'c218'],
+        bestiaryNumbers: [97, 103, 105],
       },
     ],
   },
@@ -741,7 +737,7 @@ export const walkthrough: WalkthroughChapter[] = [
     steps: [
       {
         id: 'ch24-s01',
-        text: "Talk to King Giott in the Dwarven Castle for Luka's Necklace, then visit the hospital on B1. The Falcon can now fly over lava.",
+        text: "Talk to King Giott in the Dwarven Castle for Luca's Necklace, then visit the hospital on B1. The Falcon can now fly over lava.",
       },
       {
         id: 'ch24-s02',
@@ -848,7 +844,7 @@ export const walkthrough: WalkthroughChapter[] = [
   {
     id: 'ch28-sealed-cavern',
     title: 'Sealed Cavern',
-    summary: 'Unlock the Sealed Cavern with Luka\'s Necklace for the last dark crystal.',
+    summary: 'Unlock the Sealed Cavern with Luca\'s Necklace for the last dark crystal.',
     steps: [
       {
         id: 'ch28-s01',
@@ -857,7 +853,7 @@ export const walkthrough: WalkthroughChapter[] = [
       },
       {
         id: 'ch28-s02',
-        text: "Land at the cave northwest of Tomra and open the door with Luka's Necklace.",
+        text: "Land at the cave northwest of Tomra and open the door with Luca's Necklace.",
       },
       {
         id: 'ch28-s03',

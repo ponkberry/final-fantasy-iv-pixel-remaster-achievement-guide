@@ -576,8 +576,8 @@ export const bestiary: BestiaryEntry[] = [
   {
     number: 89,
     name: 'Medusa',
-    location: 'Tower of Babel (Underworld)',
-    missable: true,
+    location: 'Tower of Babel (Underworld), Underworld',
+    notes: 'Also appears in the Underworld, so it isn\'t missable.',
     chapterId: 'ch21-babel-underworld',
   },
   {
@@ -633,7 +633,7 @@ export const bestiary: BestiaryEntry[] = [
     number: 97,
     name: 'Lamia Matriarch',
     location: 'Tower of Babel (second trip)',
-    notes: 'Shows up on the lower floors.',
+    notes: 'Appears on Underworld 8F and below, after the Rubicante fight.',
     missable: true,
     chapterId: 'ch23-babel-second-trip',
   },
@@ -673,9 +673,8 @@ export const bestiary: BestiaryEntry[] = [
   {
     number: 103,
     name: 'Green Dragon',
-    location: 'Tower of Babel (second trip)',
-    notes: 'Extremely rare.',
-    missable: true,
+    location: 'Tower of Babel (second trip), Underworld',
+    notes: 'Extremely rare in the tower, usually on Underworld 7F after the Rubicante fight. Also appears in the Underworld, so it isn\'t missable.',
     chapterId: 'ch23-babel-second-trip',
   },
   {
@@ -689,7 +688,7 @@ export const bestiary: BestiaryEntry[] = [
     number: 105,
     name: 'Mythril Golem',
     location: 'Tower of Babel (second trip)',
-    notes: 'Shows up on the lower floors.',
+    notes: 'Appears on Underworld 8F and below, after the Rubicante fight.',
     missable: true,
     chapterId: 'ch23-babel-second-trip',
   },
