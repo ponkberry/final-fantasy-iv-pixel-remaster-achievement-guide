@@ -816,7 +816,7 @@ export const walkthrough: WalkthroughChapter[] = [
     steps: [
       {
         id: 'ch27-s01',
-        text: 'Fly to the cave in the northwest corner of the Underworld. Cast Float on every floor. Leviathan one-shots most groups here.',
+        text: 'Fly to the cave in the northwest corner of the Underworld. Cast Float on every floor.',
         bestiaryNumbers: [79, 108, 109, 110, 111, 112],
       },
       {
@@ -848,7 +848,7 @@ export const walkthrough: WalkthroughChapter[] = [
     steps: [
       {
         id: 'ch28-s01',
-        text: 'Outside the Sylvan Cave, fight Blood Flower, Chrysalis, and Hell Flapper. On the three-tile peninsula just south, look for Gloomwing, Gorgon, Crawler, Tarantula, and the rare Yellow Dragon.',
+        text: 'Outside the Sylvan Cave, fight Blood Flower, Chrysalis, and Hell Flapper. On the three-tile peninsula just south, look for Gloomwing, Gorgon, Crawler, and Tarantula. Yellow Dragon only appears by hatching from a Mystery Egg: use a Siren on the southern part of the landmass with the Sylvan Cave and let the egg hatch.',
         bestiaryNumbers: [72, 81, 82, 83, 124, 129, 134],
       },
       {

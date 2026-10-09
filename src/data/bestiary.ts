@@ -808,7 +808,7 @@ export const bestiary: BestiaryEntry[] = [
     number: 124,
     name: 'Yellow Dragon',
     location: 'Underworld, peninsula south of Sylvan Cave',
-    notes: 'Rare. Usually hatches from a Mystery Egg.',
+    notes: 'Only appears by hatching from a Mystery Egg. Use a Siren on the southern part of the landmass with the Sylvan Cave and let the egg hatch.',
     chapterId: 'ch28-sealed-cavern',
   },
   {
